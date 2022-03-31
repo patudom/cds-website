@@ -26,7 +26,7 @@
 </template>
 
 <script lang="ts">
-import { nameRules } from '../utils/rules';
+import { nameRules } from '@/utils/rules';
 import { Component } from 'vue-property-decorator';
 import FormBase from './FormBase.vue';
 import { mapActions, mapGetters } from 'vuex';

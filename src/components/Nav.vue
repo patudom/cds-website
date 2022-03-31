@@ -1,7 +1,7 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-  </div>
+  <v-app-bar>
+    <router-link to="/">Home</router-link>
+  </v-app-bar>
 </template>
 
 <style scoped>

@@ -6,7 +6,7 @@ import vuetify from '@/plugins/vuetify';
 
 import AppLayout from '@/layouts/AppLayout.vue';
 
-Vue.component('AppLayout', AppLayout);
+Vue.component('app-layout', AppLayout);
 
 Vue.config.productionTip = false;
 
