@@ -1,12 +1,22 @@
 <template>
-  <div>
-    <h1>This is a home page</h1>
-  </div>
+  <v-container>
+    <v-row
+      class="d-flex justify-center align-center"
+    >
+    <v-col cols="12">
+      COSMIC DATA STORIES HOME PAGE
+    </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 
 @Component
-export default class Home extends Vue {}
+export default class Home extends Vue {
+
+  title = 'Home';
+
+}
 </script>

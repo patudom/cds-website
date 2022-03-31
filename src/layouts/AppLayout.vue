@@ -16,11 +16,7 @@ const defaultLayout = "DefaultLayout";
 export default class AppLayout extends Vue {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   get layout(): Promise<any> {
-
-    console.log(this);
-
     const layout = this.$route.meta.layout || defaultLayout;
-    console.log(layout);
     return () => import(`@/layouts/${layout}.vue`);
   }
 }

@@ -106,6 +106,7 @@ export default class EducatorSignUp extends FormBase {
   errorMessage = "";
   successMessage = "";
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   submitEducatorSignUp!: (data: EducatorData) => Promise<any>;
 
   beforeCreate(): void {
@@ -115,6 +116,7 @@ export default class EducatorSignUp extends FormBase {
     };
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   submit(): Promise<any> {
     return this.submitEducatorSignUp({
       firstName: this.firstName,
@@ -137,11 +139,11 @@ export default class EducatorSignUp extends FormBase {
       const code = result.data.status;
       if (code === 'ok') {
         this.reset();
-        this.successMessage = "Your account was created successfully. A verification link will be sent to your email."
+        this.successMessage = "Your account was created successfully. A verification link will be sent to your email.";
       } else if (code === 'email_already_exists') {
         this.errorMessage = "An account with this email already exists";
       } else {
-        this.errorMessage = "An error occurred. We apologize for the inconvenience"
+        this.errorMessage = "An error occurred. We apologize for the inconvenience";
       }
     }
   }

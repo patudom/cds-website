@@ -4,6 +4,10 @@ import Home from '../views/Home.vue';
 
 Vue.use(VueRouter);
 
+function importComponent(name: string): () => Promise<typeof import('*.vue')> {
+  return () => import(`@/views/${name}.vue`);
+}
+
 const routes: Array<RouteConfig> = [
   {
     path: '/',
@@ -16,7 +20,22 @@ const routes: Array<RouteConfig> = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/CreateAccount.vue')
+    component: importComponent('CreateAccount')
+  },
+  {
+    path: '/login',
+    name: 'Login',
+    component: importComponent('Login')
+  },
+  {
+    path: '/educator-create',
+    name: 'Create Educator Account',
+    component: importComponent('CreateEducatorAccount')
+  },
+  {
+    path: '/student-create',
+    name: 'Create Student Account',
+    component: importComponent('CreateStudentAccount')
   }
 ];
 

@@ -5,7 +5,9 @@ import store from './store';
 import vuetify from '@/plugins/vuetify';
 
 import AppLayout from '@/layouts/AppLayout.vue';
+import TitleMixin from '@/mixins/title';
 
+Vue.mixin(TitleMixin);
 Vue.component('app-layout', AppLayout);
 
 Vue.config.productionTip = false;

@@ -8,6 +8,15 @@
 
 
 <style lang="less">
+/**
+ Vuetify seems to like to add a scrollbar when it isn't needed
+ This changes that behavior
+ See https://stackoverflow.com/a/66208124
+ */
+html {
+  overflow-y: auto !important;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

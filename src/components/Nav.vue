@@ -2,8 +2,17 @@
   <v-app-bar
     id="nav-bar"
   >
+    <v-img
+      id="nav-logo"
+      src="cosmicds.jpg"
+      class="rounded"
+      max-height="50"
+      max-width="50"
+      contain
+    />
     <router-link to="/">Home</router-link>
     <router-link to="/create-account">Create Account</router-link>
+    <router-link to="/login">Login</router-link>
     <v-spacer></v-spacer>
     <v-btn
       icon
@@ -39,5 +48,9 @@ export default class Nav extends Vue {
 }
 #nav-bar a.router-link-exact-active {
   color: #42b983;
+}
+
+#nav-logo {
+  margin: 0px 10px;
 }
 </style>
