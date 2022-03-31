@@ -73,11 +73,11 @@
 
 <script lang="ts">
 import { Component } from 'vue-property-decorator';
-import { emailRules, nameRules, passwordRules } from '../utils/rules';
+import { emailRules, nameRules, passwordRules } from '@/utils/rules';
 import FormBase from './FormBase.vue';
 import { mapActions } from 'vuex';
 
-import { StudentData } from '../store/cosmicds';
+import { StudentData } from '@/store/rest';
 
 @Component
 export default class StudentSignUp extends FormBase {
@@ -112,7 +112,7 @@ export default class StudentSignUp extends FormBase {
   beforeCreate(): void {
     this.$options.methods = {
       ...this.$options.methods,
-      ...mapActions("cosmicds", ["submitStudentSignUp"])
+      ...mapActions("rest", ["submitStudentSignUp"])
     };
   }
 
@@ -137,11 +137,11 @@ export default class StudentSignUp extends FormBase {
       const code = result.data.status;
       if (code === 'ok') {
         this.reset();
-        this.successMessage = "Your account was created successfully. A verification link will be sent to your email."
+        this.successMessage = "Your account was created successfully. A verification link will be sent to your email.";
       } else if (code === 'email_already_exists') {
         this.errorMessage = "An account with this email already exists";
       } else {
-        this.errorMessage = "An error occurred. We apologize for the inconvenience"
+        this.errorMessage = "An error occurred. We apologize for the inconvenience";
       }
     }
   }

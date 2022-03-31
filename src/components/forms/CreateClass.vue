@@ -31,7 +31,7 @@ import { Component } from 'vue-property-decorator';
 import FormBase from './FormBase.vue';
 import { mapActions, mapGetters } from 'vuex';
 
-import { ClassData } from "../store/cosmicds";
+import { ClassData } from "@/store/rest";
 
 @Component
 export default class CreateClass extends FormBase {
@@ -45,12 +45,12 @@ export default class CreateClass extends FormBase {
 
   beforeCreate(): void {
     this.$options.computed = {
-      ...mapGetters("cosmicds", ["currentEducatorID"]),
+      ...mapGetters("rest", ["currentEducatorID"]),
       ...this.$options.computed
     };
     this.$options.methods = {
       ...this.$options.methods,
-      ...mapActions("cosmicds", ["submitClassCreation"])
+      ...mapActions("rest", ["submitClassCreation"])
     };
   }
 

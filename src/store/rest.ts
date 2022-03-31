@@ -32,7 +32,7 @@ export type StudentData = {
   namespaced: true,
   stateFactory: true
 })
-export class CosmicDSModule extends VuexModule {
+export class CDSRestModule extends VuexModule {
     
     private SERVER_URL = "http://localhost:8080";
     private userType = UserType.None;

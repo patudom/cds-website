@@ -35,7 +35,7 @@
 
 <script lang="ts">
 import { Component } from 'vue-property-decorator';
-import { emailRules, passwordRules } from "../utils/rules";
+import { emailRules, passwordRules } from "@/utils/rules";
 import FormBase from './FormBase.vue';
 import { mapActions } from 'vuex';
 
@@ -53,7 +53,7 @@ export default class EducatorSignIn extends FormBase {
   beforeCreate(): void {
     this.$options.methods = {
       ...this.$options.methods,
-      ...mapActions("cosmicds", ["checkEducatorSignIn"])
+      ...mapActions("rest", ["checkEducatorSignIn"])
     };
   }
 

@@ -72,11 +72,11 @@
 
 <script lang="ts">
 import { Component } from 'vue-property-decorator';
-import { emailRules, nameRules, passwordRules } from '../utils/rules';
+import { emailRules, nameRules, passwordRules } from '@/utils/rules';
 import FormBase from './FormBase.vue';
 import { mapActions } from 'vuex';
 
-import { EducatorData } from '../store/cosmicds';
+import { EducatorData } from '@/store/rest';
 
 @Component
 export default class EducatorSignUp extends FormBase {
@@ -111,7 +111,7 @@ export default class EducatorSignUp extends FormBase {
   beforeCreate(): void {
     this.$options.methods = {
       ...this.$options.methods,
-      ...mapActions("cosmicds", ["submitEducatorSignUp"])
+      ...mapActions("rest", ["submitEducatorSignUp"])
     };
   }
 

@@ -1,18 +1,43 @@
 <template>
-  <v-app-bar>
+  <v-app-bar
+    id="nav-bar"
+  >
     <router-link to="/">Home</router-link>
+    <router-link to="/create-account">Create Account</router-link>
+    <v-spacer></v-spacer>
+    <v-btn
+      icon
+      @click="toggleDarkMode"
+      >
+      <v-icon>mdi-brightness-6</v-icon>
+    </v-btn>
   </v-app-bar>
 </template>
 
-<style scoped>
-#nav {
-  padding: 30px;
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator';
+import { mapMutations } from 'vuex';
+
+@Component
+export default class Nav extends Vue {
+  beforeCreate(): void {
+    this.$options.methods = {
+      ...this.$options.methods,
+      ...mapMutations("website", ["toggleDarkMode"])
+    };
+  }
 }
-#nav a {
+</script>
+
+
+<style scoped>
+#nav-bar a {
   font-weight: bold;
   color: #2c3e50;
+  text-decoration: none;
+  padding: 10px;
 }
-#nav a.router-link-exact-active {
+#nav-bar a.router-link-exact-active {
   color: #42b983;
 }
 </style>
