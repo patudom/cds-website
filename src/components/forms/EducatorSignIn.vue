@@ -1,35 +1,30 @@
 <template>
-  <div id="educator-sign-in">
-    <v-card>
-      <v-card-title>Educator Sign In</v-card-title>
-      <v-form
-        ref="form"
-        class="educator-signin-form"
-        v-model="valid"
-        lazy-validation
-      >
-        <v-text-field
-          v-model="email"
-          :rules="emailRules"
-          label="Email"
-          required
-        ></v-text-field>
-        <v-text-field
-          v-model="password"
-          :rules="passwordRules"
-          label="Password"
-          type="password"
-          required
-        ></v-text-field>
-        <v-btn
-          :disabled="!valid"
-          color="success"
-          class="mr-4"
-          @click="validateAndSubmit"
-        >validate</v-btn>
-      </v-form>
-    </v-card>
-  </div>
+  <v-form
+    ref="form"
+    class="educator-signin-form"
+    v-model="valid"
+    lazy-validation
+  >
+    <v-text-field
+      v-model="email"
+      :rules="emailRules"
+      label="Email"
+      required
+    ></v-text-field>
+    <v-text-field
+      v-model="password"
+      :rules="passwordRules"
+      label="Password"
+      type="password"
+      required
+    ></v-text-field>
+    <v-btn
+      :disabled="!valid"
+      color="success"
+      class="mr-4"
+      @click="validateAndSubmit"
+    >validate</v-btn>
+  </v-form>
 </template>
 
 
