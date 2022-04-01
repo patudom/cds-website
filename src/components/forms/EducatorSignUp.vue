@@ -76,7 +76,7 @@ import { emailRules, nameRules, passwordRules } from '@/utils/rules';
 import FormBase from './FormBase.vue';
 import { mapActions } from 'vuex';
 
-import { EducatorData } from '@/store/rest';
+import { EducatorData } from '@/store/api';
 
 @Component
 export default class EducatorSignUp extends FormBase {
@@ -112,7 +112,7 @@ export default class EducatorSignUp extends FormBase {
   beforeCreate(): void {
     this.$options.methods = {
       ...this.$options.methods,
-      ...mapActions("rest", ["submitEducatorSignUp"])
+      ...mapActions("api", ["submitEducatorSignUp"])
     };
   }
 
