@@ -19,15 +19,17 @@
 </template>
 
 <script>
+import { Component, Mixins, Vue } from 'vue-property-decorator';
+
 import StudentSignUp from '@/components/forms/StudentSignUp.vue';
-import { Component, Vue } from 'vue-property-decorator';
+import TitleMixin from '@/mixins/title';
 
 @Component({
   components: {
     'student-signup': StudentSignUp
   }
 })
-export default class CreateStudentAccount extends Vue {
+export default class CreateStudentAccount extends Mixins(TitleMixin) {
 
   title = 'Create Student Account';
 

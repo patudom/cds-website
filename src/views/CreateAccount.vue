@@ -54,16 +54,17 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+import { Component, Mixins } from 'vue-property-decorator';
 
 import Info from '@/components/Info.vue';
+import TitleMixin from '@/mixins/title';
 
 @Component({
   components: {
     'info' : Info
   }
 })
-export default class CreateAccount extends Vue {
+export default class CreateAccount extends Mixins(TitleMixin) {
 
   dialog = false;
   title = 'Create Account';

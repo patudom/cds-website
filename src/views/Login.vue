@@ -32,10 +32,11 @@
 </template>
 
 <script>
-import { Component, Vue } from 'vue-property-decorator';
+import { Component, Mixins, Vue } from 'vue-property-decorator';
+import TitleMixin from '@/mixins/title';
 
 @Component
-export default class Login extends Vue {
+export default class Login extends Mixins(TitleMixin) {
 
   title = "Login";
 

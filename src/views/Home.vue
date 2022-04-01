@@ -13,10 +13,11 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+import { Component, Mixins, Vue } from 'vue-property-decorator';
+import TitleMixin from '@/mixins/title';
 
 @Component
-export default class Home extends Vue {
+export default class Home extends Mixins(TitleMixin) {
 
   title = 'Home';
 
