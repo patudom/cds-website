@@ -9,5 +9,6 @@ module.exports = {
           args[0].title = "Cosmic Data Stories";
           return args;
       });
-  }
+  },
+  publicPath: process.env.NODE_ENV === "production" ? "/cds-website/" : "/",
 };
