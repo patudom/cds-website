@@ -1,73 +1,68 @@
 <template>
-<div id="student-sign-up">
-  <v-card>
-    <v-card-title>Student Sign Up</v-card-title>
-    <v-form
-      ref="form"
-      class="student-signup-form"
-      v-model="valid"
-      lazy-validation
-    >
-      <v-text-field
-        v-model="firstName"
-        :rules="nameRules"
-        label="First name"
-        color="purple darken-2"
-        required
-      ></v-text-field>
-      <v-text-field
-        v-model="lastName"
-        :rules="nameRules"
-        label="Last name"
-        required
-      ></v-text-field>
-      <v-text-field
-        v-model="email"
-        :rules="emailRules"
-        label="Email"
-        required
-      ></v-text-field>
-      <v-text-field
-        v-model="password"
-        :rules="passwordRules"
-        label="Password"
-        type="password"
-        required
-      ></v-text-field>
-      <v-text-field
-        v-model="institution"
-        :rules="nameRules"
-        label="Educational institution"
-      ></v-text-field>
-      <v-text-field
-        v-model="age"
-        hide-details
-        single-line
-        label="Age"
-        type="number"
-      ></v-text-field>
-      <v-select
-        v-model="gender"
-        :items="['Male', 'Female', 'Other']"
-        label="Gender"
-      ></v-select>
-      <v-alert
-        v-if="errorMessage"
-        color="red lighten-2"
-        >{{ errorMessage }}</v-alert>
-      <v-alert
-        v-if="successMessage"
-        color="green lighten-2"
-        >{{ successMessage }}</v-alert>
-      <v-btn
-        :disabled="!valid"
-        color="success"
-        class="mr-4"
-        @click="validateAndSubmit"
-      >validate</v-btn>
-    </v-form>
-  </v-card>
-</div>
+  <v-form
+    ref="form"
+    class="student-signup-form"
+    v-model="valid"
+    lazy-validation
+  >
+    <v-text-field
+      v-model="firstName"
+      :rules="nameRules"
+      label="First name"
+      color="purple darken-2"
+      required
+    ></v-text-field>
+    <v-text-field
+      v-model="lastName"
+      :rules="nameRules"
+      label="Last name"
+      required
+    ></v-text-field>
+    <v-text-field
+      v-model="email"
+      :rules="emailRules"
+      label="Email"
+      required
+    ></v-text-field>
+    <v-text-field
+      v-model="password"
+      :rules="passwordRules"
+      label="Password"
+      type="password"
+      required
+    ></v-text-field>
+    <v-text-field
+      v-model="institution"
+      :rules="nameRules"
+      label="Educational institution"
+    ></v-text-field>
+    <v-text-field
+      v-model="age"
+      hide-details
+      single-line
+      label="Age"
+      type="number"
+    ></v-text-field>
+    <v-select
+      v-model="gender"
+      :items="['Male', 'Female', 'Other']"
+      label="Gender"
+    ></v-select>
+    <v-alert
+      v-if="errorMessage"
+      color="red lighten-2"
+      >{{ errorMessage }}</v-alert>
+    <v-alert
+      v-if="successMessage"
+      color="green lighten-2"
+      >{{ successMessage }}</v-alert>
+    <v-btn
+      :disabled="!valid"
+      color="success"
+      class="mr-4"
+      @click="validateAndSubmit"
+    >validate</v-btn>
+  </v-form>
 </template>
 
 

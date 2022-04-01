@@ -19,8 +19,9 @@
 </template>
 
 <script>
-import StudentSignUp from '@/components/forms/StudentSignUp.vue';
 import { Component, Vue } from 'vue-property-decorator';
+
+import StudentSignUp from '@/components/forms/StudentSignUp.vue';
 
 @Component({
   components: {

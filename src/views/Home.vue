@@ -4,7 +4,9 @@
       class="d-flex justify-center align-center"
     >
     <v-col cols="12">
-      COSMIC DATA STORIES HOME PAGE
+      <div>
+        COSMIC DATA STORIES HOME PAGE
+      </div>
     </v-col>
     </v-row>
   </v-container>
