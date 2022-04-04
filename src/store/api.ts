@@ -32,7 +32,7 @@ export type StudentData = {
   namespaced: true,
   stateFactory: true
 })
-export class CDSRestModule extends VuexModule {
+export class CDSApiModule extends VuexModule {
     
     private SERVER_URL = "http://localhost:8080";
     private userType = UserType.None;

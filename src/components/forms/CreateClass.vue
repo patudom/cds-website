@@ -31,7 +31,7 @@ import { Component } from 'vue-property-decorator';
 import FormBase from './FormBase.vue';
 import { mapActions, mapGetters } from 'vuex';
 
-import { ClassData } from "@/store/rest";
+import { ClassData } from "@/store/api";
 
 @Component
 export default class CreateClass extends FormBase {

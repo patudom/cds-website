@@ -47,7 +47,7 @@ export default class Nav extends Vue {
   padding: 10px;
 }
 #nav-bar a.router-link-exact-active {
-  color: #42b983;
+  color: var(--v-primary-base);
 }
 
 #nav-logo {

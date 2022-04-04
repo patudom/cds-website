@@ -1,11 +1,11 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-import { CDSRestModule } from './rest';
+import { CDSApiModule } from './api';
 import { CDSWebsiteModule } from './website';
 
 Vue.use(Vuex);
 
 const store = new Vuex.Store({});
-store.registerModule("rest", CDSRestModule);
+store.registerModule("api", CDSApiModule);
 store.registerModule("website", CDSWebsiteModule);
 export default store;

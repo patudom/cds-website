@@ -48,7 +48,7 @@ export default class StudentSignIn extends FormBase {
   beforeCreate(): void {
     this.$options.methods = {
       ...this.$options.methods,
-      ...mapActions("rest", ["checkStudentSignIn"])
+      ...mapActions("api", ["checkStudentSignIn"])
     };
   }
 
