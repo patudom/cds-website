@@ -1,7 +1,7 @@
 <template>
   <v-form
     ref="form"
-    class="student-signin-form"
+    class="login-form"
     v-model="valid"
     lazy-validation
   >
@@ -23,7 +23,17 @@
       color="success"
       class="mr-4"
       @click="validateAndSubmit"
-    >validate</v-btn>
+    >submit</v-btn>
+    <v-btn-toggle
+      v-model="loginType"
+    >
+      <v-btn value="student">
+        Student
+      </v-btn>
+      <v-btn value="educator">
+        Educator
+      </v-btn>
+    </v-btn-toggle>
   </v-form>
 </template>
 
@@ -37,25 +47,34 @@ import { mapActions } from 'vuex';
 import { apiNamespace } from '@/store';
 
 @Component
-export default class StudentSignIn extends FormBase {
+export default class LoginForm extends FormBase {
 
+  loginType: "student" | "educator" = "educator";
   valid = true;
-  email = "";
-  password = "";
+  email = "jon@harvard.edu";
+  password = "test";
   emailRules = emailRules;
   passwordRules = passwordRules;
 
-  checkStudentSignIn!: (email: string, password: string) => Promise<boolean>;
+  submitEducatorSignIn!: (args: { email: string, password: string }) => Promise<void>;
+  submitStudentSignIn!: (args: { email: string, password: string }) => Promise<void>;
 
   beforeCreate(): void {
     this.$options.methods = {
       ...this.$options.methods,
-      ...mapActions(apiNamespace, ["checkStudentSignIn"])
+      ...mapActions(apiNamespace, [
+        "submitEducatorSignIn",
+        "submitStudentSignIn"
+      ])
     };
   }
 
-  async submit(): Promise<boolean> {
-    return this.checkStudentSignIn(this.email, this.password);
+  get submitLogin(): (args: { email: string, password: string }) => Promise<void> {
+    return this.loginType === "student" ? this.submitStudentSignIn : this.submitEducatorSignIn;
+  }
+
+  async submit(): Promise<void> {
+    return this.submitLogin({ email: this.email, password: this.password });
   }
 
   async validateAndSubmit(): Promise<void> {

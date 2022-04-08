@@ -33,6 +33,7 @@ import { Component } from 'vue-property-decorator';
 import { emailRules, passwordRules } from "@/utils/rules";
 import FormBase from './FormBase.vue';
 import { mapActions } from 'vuex';
+import { apiNamespace } from '@/store';
 
 @Component
 export default class EducatorSignIn extends FormBase {
@@ -48,7 +49,7 @@ export default class EducatorSignIn extends FormBase {
   beforeCreate(): void {
     this.$options.methods = {
       ...this.$options.methods,
-      ...mapActions("api", ["checkEducatorSignIn"])
+      ...mapActions(apiNamespace, ["checkEducatorSignIn"])
     };
   }
 
