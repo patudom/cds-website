@@ -5,22 +5,9 @@
         <h2>Welcome to the Hubble Data Story!</h2>
       </v-col>
     </v-row>
-    <v-row
-      class="d-flex justify-center align-center"
-    >
-      <v-col cols="6">
-        <v-text-field
-          placeholder="username"
-        />
-      </v-col>
-    </v-row>
-    <v-row
-      class="d-flex justify-center align-center"
-    >
-      <v-col cols="6">
-        <v-text-field
-          placeholder="password"
-        />
+    <v-row>
+      <v-col cols="12">
+        <login-form/>
       </v-col>
     </v-row>
     <v-row>
@@ -31,12 +18,19 @@
   </v-container>
 </template>
 
-<script>
+<script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 
-@Component
+import { LoginForm } from '@/components/forms';
+
+@Component({
+  components: {
+    'login-form': LoginForm,
+  }
+})
 export default class Login extends Vue {
 
+  loginType = "student";
   title = "Login";
 
 }

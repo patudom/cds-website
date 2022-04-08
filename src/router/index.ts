@@ -36,6 +36,11 @@ const routes: Array<RouteConfig> = [
     path: '/student-create',
     name: 'Create Student Account',
     component: importComponent('CreateStudentAccount')
+  },
+  {
+    path: '/manage-classrooms',
+    name: 'Manage Classrooms',
+    component: importComponent('ManageClasses')
   }
 ];
 

@@ -5,7 +5,10 @@ import { CDSWebsiteModule } from './website';
 
 Vue.use(Vuex);
 
+export const apiNamespace = "api";
+export const websiteNamespace = "website";
+
 const store = new Vuex.Store({});
-store.registerModule("api", CDSApiModule);
-store.registerModule("website", CDSWebsiteModule);
+store.registerModule(apiNamespace, CDSApiModule);
+store.registerModule(websiteNamespace, CDSWebsiteModule);
 export default store;
