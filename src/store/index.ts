@@ -1,7 +1,7 @@
-import Vue from 'vue';
-import Vuex from 'vuex';
-import { CDSApiModule } from './api';
-import { CDSWebsiteModule } from './website';
+import Vue from "vue";
+import Vuex from "vuex";
+import { CDSApiModule } from "./api";
+import { CDSWebsiteModule } from "./website";
 
 Vue.use(Vuex);
 

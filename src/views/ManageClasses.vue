@@ -20,12 +20,12 @@
 </template>
 
 <script lang="ts">
-import ClassesTable from '@/components/ClassesTable.vue';
-import { Component, Vue } from 'vue-property-decorator';
+import ClassesTable from "@/components/ClassesTable.vue";
+import { Component, Vue } from "vue-property-decorator";
 
 @Component({
   components: {
-    'classes-table': ClassesTable,
+    "classes-table": ClassesTable,
   }
 })
 export default class ManageClasses extends Vue {

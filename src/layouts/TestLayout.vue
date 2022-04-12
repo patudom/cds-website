@@ -6,12 +6,12 @@
 </template>
 
 <script>
-import { Component } from 'vue-property-decorator';
-import Nav from '@/components/Nav.vue';
+import { Component } from "vue-property-decorator";
+import Nav from "@/components/Nav.vue";
 
 @Component({
   components: {
-    'cds-nav': Nav
+    "cds-nav": Nav
   }
 })
 export default class TestLayout {}

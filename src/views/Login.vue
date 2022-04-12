@@ -19,13 +19,13 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+import { Component, Vue } from "vue-property-decorator";
 
-import { LoginForm } from '@/components/forms';
+import { LoginForm } from "@/components/forms";
 
 @Component({
   components: {
-    'login-form': LoginForm,
+    "login-form": LoginForm,
   }
 })
 export default class Login extends Vue {

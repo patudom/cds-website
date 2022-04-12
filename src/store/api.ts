@@ -1,5 +1,5 @@
-import axios, { AxiosResponse } from 'axios';
-import { Action, Module, MutationAction, VuexModule } from 'vuex-module-decorators';
+import axios, { AxiosResponse } from "axios";
+import { Action, Module, MutationAction, VuexModule } from "vuex-module-decorators";
 
 export enum UserType {
     None, // Not logged in
@@ -71,7 +71,7 @@ export class CDSApiModule extends VuexModule {
     user = { id: -1, type: UserType.None };
     userClasses: ClassInfo[] = [];
 
-    @MutationAction({ mutate: ['userClasses'] })
+    @MutationAction({ mutate: ["userClasses"] })
     async submitClassCreation(name: string): Promise<{userClasses: ClassInfo[]}> {
       const state = (this.state as CDSApiModule);
       const response = await axios.put(`${SERVER_URL}/create-class`, { name: name, educatorID: state.user.id });
@@ -96,7 +96,7 @@ export class CDSApiModule extends VuexModule {
       return axios.put(`${SERVER_URL}/student-sign-up`, data);
     }
 
-    @MutationAction({ mutate: ['user', 'userClasses'] })
+    @MutationAction({ mutate: ["user", "userClasses"] })
     async submitStudentSignIn(args: { email: string, password: string }): Promise<{user:User, userClasses: ClassInfo[]}> {
       const state = (this.state as CDSApiModule);
       const response = await axios.post(`${SERVER_URL}/student-login`, {
@@ -115,7 +115,7 @@ export class CDSApiModule extends VuexModule {
       return { user: state.user, userClasses: state.userClasses };
     }
 
-    @MutationAction({ mutate: ['user', 'userClasses'] })
+    @MutationAction({ mutate: ["user", "userClasses"] })
     async submitEducatorSignIn(args: { email: string, password: string }): Promise<{user:User, userClasses: ClassInfo[]}> {
       const state = (this.state as CDSApiModule);
       const response = await axios.post(`${SERVER_URL}/educator-login`, {

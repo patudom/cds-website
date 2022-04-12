@@ -18,16 +18,16 @@
 </template>
 
 <script lang="ts">
-import { apiNamespace } from '@/store';
-import { CDSApiModule, ClassInfo } from '@/store/api';
-import { Component, Vue } from 'vue-property-decorator';
-import { mapState } from 'vuex';
-import AddClass from './AddClass.vue';
+import { apiNamespace } from "@/store";
+import { CDSApiModule, ClassInfo } from "@/store/api";
+import { Component, Vue } from "vue-property-decorator";
+import { mapState } from "vuex";
+import AddClass from "./AddClass.vue";
 
 
 @Component({
   components: {
-    'add-class': AddClass
+    "add-class": AddClass
   }
 })
 export default class ClassesTable extends Vue {

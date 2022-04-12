@@ -29,12 +29,12 @@
 
 
 <script lang="ts">
-import { Component } from 'vue-property-decorator';
-import { emailRules, passwordRules } from '@/utils/rules';
-import FormBase from './FormBase.vue';
-import { mapActions } from 'vuex';
+import { Component } from "vue-property-decorator";
+import { emailRules, passwordRules } from "@/utils/rules";
+import FormBase from "./FormBase.vue";
+import { mapActions } from "vuex";
 
-import { apiNamespace } from '@/store';
+import { apiNamespace } from "@/store";
 
 @Component
 export default class StudentSignIn extends FormBase {

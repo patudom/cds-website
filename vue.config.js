@@ -1,10 +1,10 @@
 module.exports = {
   transpileDependencies: [
-    'vuetify'
+    "vuetify"
   ],
   chainWebpack: config => {
     config
-      .plugin('html')
+      .plugin("html")
       .tap(args => {
           args[0].title = "Cosmic Data Stories";
           return args;

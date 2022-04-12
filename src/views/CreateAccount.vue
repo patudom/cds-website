@@ -54,26 +54,26 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+import { Component, Vue } from "vue-property-decorator";
 
-import Info from '@/components/Info.vue';
+import Info from "@/components/Info.vue";
 
 @Component({
   components: {
-    'info' : Info
+    "info" : Info
   }
 })
 export default class CreateAccount extends Vue {
 
   dialog = false;
-  title = 'Create Account';
+  title = "Create Account";
 
   navigateToStudentCreation(): void {
-    this.$router.push('/student-create');
+    this.$router.push("/student-create");
   }
 
   navigateToEducatorCreation(): void {
-    this.$router.push('/educator-create');
+    this.$router.push("/educator-create");
   }
 
 }

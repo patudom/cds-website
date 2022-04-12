@@ -1,6 +1,6 @@
-import { Module, Mutation, VuexModule } from 'vuex-module-decorators';
+import { Module, Mutation, VuexModule } from "vuex-module-decorators";
 
-import vuetify from '@/plugins/vuetify';
+import vuetify from "@/plugins/vuetify";
 
 @Module({
   namespaced: true,

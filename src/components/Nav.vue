@@ -42,12 +42,12 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
-import { mapMutations, mapState } from 'vuex';
+import { Component, Vue } from "vue-property-decorator";
+import { mapMutations, mapState } from "vuex";
 
-import { CDSApiModule, User, UserType } from '@/store/api';
-import { apiNamespace, websiteNamespace } from '@/store';
-import EducatorAccountOptions from '@/components/menus/EducatorAccountOptions.vue';
+import { CDSApiModule, User, UserType } from "@/store/api";
+import { apiNamespace, websiteNamespace } from "@/store";
+import EducatorAccountOptions from "@/components/menus/EducatorAccountOptions.vue";
 
 @Component
 export default class Nav extends Vue {
