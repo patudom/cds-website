@@ -19,18 +19,18 @@
 </template>
 
 <script>
-import { Component, Vue } from 'vue-property-decorator';
+import { Component, Vue } from "vue-property-decorator";
 
-import EducatorSignUp from '@/components/forms/EducatorSignUp.vue';
+import EducatorSignUp from "@/components/forms/EducatorSignUp.vue";
 
 @Component({
   components: {
-    'educator-signup': EducatorSignUp
+    "educator-signup": EducatorSignUp
   }
 })
 export default class CreateEducatorAccount extends Vue {
 
-  title = 'Create Educator Account';
+  title = "Create Educator Account";
 
 }
 </script>

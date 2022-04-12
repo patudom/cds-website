@@ -66,12 +66,12 @@
 
 
 <script lang="ts">
-import { Component } from 'vue-property-decorator';
-import { emailRules, nameRules, passwordRules } from '@/utils/rules';
-import FormBase from './FormBase.vue';
-import { mapActions } from 'vuex';
+import { Component } from "vue-property-decorator";
+import { emailRules, nameRules, passwordRules } from "@/utils/rules";
+import FormBase from "./FormBase.vue";
+import { mapActions } from "vuex";
 
-import { EducatorData } from '@/store/api';
+import { EducatorData } from "@/store/api";
 
 @Component
 export default class EducatorSignUp extends FormBase {
@@ -132,10 +132,10 @@ export default class EducatorSignUp extends FormBase {
       const result = await this.submit();
       console.log(result);
       const code = result.data.status;
-      if (code === 'ok') {
+      if (code === "ok") {
         this.reset();
         this.successMessage = "Your account was created successfully. A verification link will be sent to your email.";
-      } else if (code === 'email_already_exists') {
+      } else if (code === "email_already_exists") {
         this.errorMessage = "An account with this email already exists";
       } else {
         this.errorMessage = "An error occurred. We apologize for the inconvenience";

@@ -1,4 +1,4 @@
-import { Component, Vue } from 'vue-property-decorator';
+import { Component, Vue } from "vue-property-decorator";
 
 type TitleGetter = {
   call: (v: Vue) => string;
@@ -12,7 +12,7 @@ function getTitle(vm: Vue): string | null {
   // @ts-ignore
   const title: TitleOrGetter | undefined = vm.title;
   if (title) {
-    return typeof title === 'string'
+    return typeof title === "string"
       ? title
       : title.call(vm);
   } else {

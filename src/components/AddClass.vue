@@ -19,10 +19,10 @@
 </template>
 
 <script lang="ts">
-import { apiNamespace } from '@/store';
-import { mapActions } from 'vuex';
-import { Component, Vue } from 'vue-property-decorator';
-import { AxiosResponse } from 'axios';
+import { apiNamespace } from "@/store";
+import { mapActions } from "vuex";
+import { Component, Vue } from "vue-property-decorator";
+import { AxiosResponse } from "axios";
 
 @Component
 export default class AddClass extends Vue {

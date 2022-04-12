@@ -12,9 +12,9 @@
 </template>
 
 <script lang="ts">
-import { apiNamespace } from '@/store';
-import { Component, Vue } from 'vue-property-decorator';
-import { mapMutations } from 'vuex';
+import { apiNamespace } from "@/store";
+import { Component, Vue } from "vue-property-decorator";
+import { mapMutations } from "vuex";
 
 type Action = () => void;
 type EducatorAccountOption = {

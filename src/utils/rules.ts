@@ -6,7 +6,7 @@ export const nameRules: Rule[] = [
 
 export const emailRules: Rule[] = [
   v => !!v || "Email is required",
-  v => /.+@.+\..+/.test(v) || 'E-mail must be valid',
+  v => /.+@.+\..+/.test(v) || "E-mail must be valid",
 ];
 
 export const passwordRules: Rule[] = [
