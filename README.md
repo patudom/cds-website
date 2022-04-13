@@ -3,6 +3,7 @@
 This repository contains the source code for the CosmicDS website. The website is created using [Vue.js](https://vuejs.org/) and uses [Vuetify](https://vuetifyjs.com/en/) for styling.
 
 ## Project structure
+
 For contributors, a brief breakdown of the project structure is as follows:
 - The top-level directory primarily contains various configuration files, along with the license.
 - The `public` directory is the home for static content that we want exposed to users - for example, `public/cosmicds.jpg` will be accessible in the built webpage as `<root-url>/cosmicds.jpg`.
@@ -30,7 +31,11 @@ For contributors, a brief breakdown of the project structure is as follows:
   * 
 
 ## Building and testing
+
 The site can be built using `npm run build`. Linting (using ESLint) can be performed using `npm run lint`  Assuming there are no errors, you can run the development server for local testing using `npm run serve`.
 
 Note: Currently the CosmicDS API lives on an AWS EC2 instance and does yet support HTTPS, so visit your local site using HTTP, or requests to the API won't work (alternatively, you can build and run a local copy of the API repository, and change `SERVER_URL` in `src/store/api.ts`.
 
+## Deployment
+
+On any update to the main branch, the website is rebuilt and deployed to GitHub Pages via a GitHub Actions workflow.
