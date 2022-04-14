@@ -48,27 +48,29 @@ export interface User {
   type: UserType;
 }
 
-//const SERVER_URL = "http://localhost:8080";
+export interface LoginResponse {
+  result: "bad_request" | "ok" | "email_not_exist" | "not_verified" | "incorrect_password";
+  success: boolean;
+}
+
+// For local testing
+// const SERVER_URL = "http://localhost:8080";
+
+// Use AWS EBS app
 const SERVER_URL = "http://cosmicdsapi-env.eba-tcbxbxhk.us-east-1.elasticbeanstalk.com";
 
-async function classesForEducator(user: User): Promise<ClassInfo[]> {
-  if (user.type !== UserType.Educator) {
+async function classesForUser(user: User): Promise<ClassInfo[]> {
+  if (user.type !== UserType.Educator && user.type !== UserType.Student) {
     return [];
   }
-  const response = await axios.get(`${SERVER_URL}/classes/${user.id}`);
+  const type = (user.type === UserType.Educator) ? "educator" : "student";
+  const response = await axios.get(`${SERVER_URL}/${type}-classes/${user.id}`);
   return response.data.classes;
 }
 
 const EMPTY_USER = {
   id: -1,
   type: UserType.None
-};
-
-type LoginResult = {
-  user: User;
-  userClasses: ClassInfo[];
-  status: string;
-  success: boolean;
 };
 
 @Module({
@@ -96,6 +98,11 @@ export class CDSApiModule extends VuexModule {
       this.user = user;
     }
 
+    @Mutation
+    setUserClasses(classes: ClassInfo[]): void {
+      this.userClasses = classes;
+    }
+
     @MutationAction({ mutate: ["userClasses"] })
     async submitClassCreation(name: string): Promise<{userClasses: ClassInfo[]}> {
       const state = (this.state as CDSApiModule);
@@ -121,51 +128,46 @@ export class CDSApiModule extends VuexModule {
       return axios.post(`${SERVER_URL}/student-sign-up`, data);
     }
 
-    @MutationAction({ mutate: ["user", "userClasses"] })
-    async submitStudentSignIn(args: { email: string, password: string }): Promise<{user:User, userClasses: ClassInfo[]}> {
-      const state = (this.state as CDSApiModule);
+    @Action({ rawError: true })
+    async submitStudentSignIn(args: { email: string, password: string }): Promise<LoginResponse> {
       const response = await axios.put(`${SERVER_URL}/student-login`, {
         email: args.email,
         password: args.password
       });
-      //this.context.commit("setUser", user);
       if (response.data.success) {
-        return {
-          user: {
-            id: response.data.id,
-            type: UserType.Student
-          },
-          userClasses: []
+        const user ={
+          id: response.data.id,
+          type: UserType.Student
         };
+        const classes = await classesForUser(user);
+        this.context.commit("setUser", user);
+        this.context.commit("setUserClasses", classes);
       }
-      return {
-        user: state.user,
-        userClasses: state.userClasses,
-      };
+      return response.data;
     }
 
-    @MutationAction({ mutate: ["user", "userClasses"] })
-    async submitEducatorSignIn(args: { email: string, password: string }): Promise<{user:User, userClasses: ClassInfo[]}> {
-      const state = (this.state as CDSApiModule);
+    @Action({ rawError: true })
+    async submitEducatorSignIn(args: { email: string, password: string }): Promise<LoginResponse> {
       const response = await axios.put(`${SERVER_URL}/educator-login`, {
         email: args.email,
         password: args.password
       });
-      console.log(response);
-      if (response.data.valid) {
-        const user = {
+      if (response.data.success) {
+        const user ={
           id: response.data.id,
           type: UserType.Educator
         };
-        const classes = await classesForEducator(user);
-        return { user: user, userClasses: classes };
+        const classes = await classesForUser(user);
+        this.context.commit("setUser", user);
+        this.context.commit("setUserClasses", classes);
       }
-      return { user: state.user, userClasses: state.userClasses };
+      return response.data;
     }
 
     @Mutation
     logout(): void {
       this.user = EMPTY_USER;
+      this.userClasses = [];
     }
 
     @Action({ rawError: true })

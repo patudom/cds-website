@@ -26,6 +26,10 @@
             type="password"
             required
           ></v-text-field>
+          <v-alert
+            v-if="errorMessage"
+            color="red lighten-2"
+            >{{ errorMessage }}</v-alert>
           <v-btn
             :disabled="!valid"
             color="success"
@@ -60,7 +64,7 @@ import FormBase from "@/components/FormBase.vue";
 import { mapActions, mapGetters } from "vuex";
 
 import { apiNamespace } from "@/store";
-import { UserType } from "@/store/api";
+import { LoginResponse, UserType } from "@/store/api";
 
 @Component
 export default class Login extends FormBase {
@@ -70,11 +74,12 @@ export default class Login extends FormBase {
   valid = true;
   email = "jon@harvard.edu";
   password = "test";
+  errorMessage = "";
   emailRules = emailRules;
   passwordRules = passwordRules;
 
-  submitEducatorSignIn!: (args: { email: string, password: string }) => Promise<void>;
-  submitStudentSignIn!: (args: { email: string, password: string }) => Promise<void>;
+  submitEducatorSignIn!: (args: { email: string, password: string }) => Promise<LoginResponse>;
+  submitStudentSignIn!: (args: { email: string, password: string }) => Promise<LoginResponse>;
   userType!: UserType;
 
   beforeCreate(): void {
@@ -93,21 +98,37 @@ export default class Login extends FormBase {
     };
   }
 
-  get submitLogin(): (args: { email: string, password: string }) => Promise<void> {
+  get submitLogin(): (args: { email: string, password: string }) => Promise<LoginResponse> {
     return this.loginType === "student" ? this.submitStudentSignIn : this.submitEducatorSignIn;
   }
 
-  async submit(): Promise<void> {
+  async submit(): Promise<LoginResponse> {
     return this.submitLogin({ email: this.email, password: this.password });
   }
 
+  responseErrorMessage(response: LoginResponse) {
+    switch (response.result) {
+      case "email_not_exist":
+        return `No ${this.loginType} account with this email exists`;
+      case "not_verified":
+        return "This account has not yet been verified. Please check your email for a verification link.";
+      case "incorrect_password":
+        return "Your password is incorrect.";
+      default:
+        return "An error occurred. We apologize for the inconvenience.";
+    }
+  }
+
   async validateAndSubmit(): Promise<void> {
-    const valid = this.validate();
-    if (valid) {
-      await this.submit();
-      if (this.userType === UserType.Educator) {
-        this.$router.push("/manage-classrooms");
-      }
+    if (!this.validate()) { return; }
+
+    const response = await this.submit();
+    if (!response.success) {
+      this.errorMessage = this.responseErrorMessage(response);
+      return;
+    }
+    if (this.userType === UserType.Educator) {
+      this.$router.push("/manage-classrooms");
     }
   }
 
