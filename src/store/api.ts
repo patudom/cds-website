@@ -56,8 +56,8 @@ export interface LoginResponse {
 // For local testing
 // const SERVER_URL = "http://localhost:8080";
 
-// Use AWS EBS app
-const SERVER_URL = "http://cosmicdsapi-env.eba-tcbxbxhk.us-east-1.elasticbeanstalk.com";
+// AWS EBS app
+const SERVER_URL = "https://api.cosmicds.cfa.harvard.edu";
 
 async function classesForUser(user: User): Promise<ClassInfo[]> {
   if (user.type !== UserType.Educator && user.type !== UserType.Student) {
