@@ -34,8 +34,6 @@ For contributors, a brief breakdown of the project structure is as follows:
 
 The site can be built using `npm run build`. Linting (using ESLint) can be performed using `npm run lint`  Assuming there are no errors, you can run the development server for local testing using `npm run serve`.
 
-Note: Currently the CosmicDS API lives on an AWS EC2 instance and does yet support HTTPS, so visit your local site using HTTP, or requests to the API won't work (alternatively, you can build and run a local copy of the API repository, and change `SERVER_URL` in `src/store/api.ts`.
-
 ## Deployment
 
 On any update to the main branch, the website is rebuilt and deployed to GitHub Pages via a GitHub Actions workflow.
