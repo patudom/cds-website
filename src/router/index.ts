@@ -41,6 +41,16 @@ const routes: Array<RouteConfig> = [
     path: "/manage-classrooms",
     name: "Manage Classrooms",
     component: importComponent("ManageClasses")
+  },
+  {
+    path: "/educator-account-created",
+    name: "Educator Account Created",
+    component: importComponent("EducatorAccountCreated")
+  },
+  {
+    path: "/student-account-created",
+    name: "Student Account Created",
+    component: importComponent("StudentAccountCreated")
   }
 ];
 

@@ -1,5 +1,5 @@
 import axios, { AxiosResponse } from "axios";
-import { Action, Module, MutationAction, VuexModule } from "vuex-module-decorators";
+import { Action, Module, Mutation, MutationAction, VuexModule } from "vuex-module-decorators";
 
 export enum UserType {
     None, // Not logged in
@@ -24,13 +24,13 @@ export interface EducatorData {
 }
 
 export interface StudentData {
-  firstName: string;
-  lastName: string;
+  username: string;
   email: string;
   institution: string | null;
   password: string;
   age: number | null;
-  gender: string | null
+  gender: string | null,
+  classroomCode?: string
 }
 
 export interface LoginInfo {
@@ -48,16 +48,30 @@ export interface User {
   type: UserType;
 }
 
-// const SERVER_URL = "http://localhost:8080"
+export interface LoginResponse {
+  result: "bad_request" | "ok" | "email_not_exist" | "not_verified" | "incorrect_password";
+  success: boolean;
+}
+
+// For local testing
+// const SERVER_URL = "http://localhost:8080";
+
+// AWS EBS app
 const SERVER_URL = "https://api.cosmicds.cfa.harvard.edu";
 
-async function classesForEducator(user: User): Promise<ClassInfo[]> {
-  if (user.type !== UserType.Educator) {
+async function classesForUser(user: User): Promise<ClassInfo[]> {
+  if (user.type !== UserType.Educator && user.type !== UserType.Student) {
     return [];
   }
-  const response = await axios.get(`${SERVER_URL}/classes/${user.id}`);
+  const type = (user.type === UserType.Educator) ? "educator" : "student";
+  const response = await axios.get(`${SERVER_URL}/${type}-classes/${user.id}`);
   return response.data.classes;
 }
+
+const EMPTY_USER = {
+  id: -1,
+  type: UserType.None
+};
 
 @Module({
   namespaced: true,
@@ -68,13 +82,31 @@ export class CDSApiModule extends VuexModule {
     // userType = UserType.None;
     // userId = -1;
 
-    user = { id: -1, type: UserType.None };
+    user: User = EMPTY_USER;
     userClasses: ClassInfo[] = [];
+
+    get userId(): number {
+      return this.user.id;
+    }
+
+    get userType(): UserType {
+      return this.user.type;
+    }
+
+    @Mutation
+    setUser(user: User): void {
+      this.user = user;
+    }
+
+    @Mutation
+    setUserClasses(classes: ClassInfo[]): void {
+      this.userClasses = classes;
+    }
 
     @MutationAction({ mutate: ["userClasses"] })
     async submitClassCreation(name: string): Promise<{userClasses: ClassInfo[]}> {
       const state = (this.state as CDSApiModule);
-      const response = await axios.put(`${SERVER_URL}/create-class`, { name: name, educatorID: state.user.id });
+      const response = await axios.post(`${SERVER_URL}/create-class`, { name: name, educatorID: state.user.id });
       console.log(this);
       console.log(response);
       if (response.data.status === "ok") {
@@ -88,49 +120,59 @@ export class CDSApiModule extends VuexModule {
 
     @Action({ rawError: true })
     submitEducatorSignUp(data: EducatorData): Promise<AxiosResponse> {
-      return axios.put(`${SERVER_URL}/educator-sign-up`, data);
+      return axios.post(`${SERVER_URL}/educator-sign-up`, data);
     }
 
     @Action({ rawError: true })
     submitStudentSignUp(data: StudentData): Promise<AxiosResponse> {
-      return axios.put(`${SERVER_URL}/student-sign-up`, data);
+      return axios.post(`${SERVER_URL}/student-sign-up`, data);
     }
 
-    @MutationAction({ mutate: ["user", "userClasses"] })
-    async submitStudentSignIn(args: { email: string, password: string }): Promise<{user:User, userClasses: ClassInfo[]}> {
-      const state = (this.state as CDSApiModule);
-      const response = await axios.post(`${SERVER_URL}/student-login`, {
+    @Action({ rawError: true })
+    async submitStudentSignIn(args: { email: string, password: string }): Promise<LoginResponse> {
+      const response = await axios.put(`${SERVER_URL}/student-login`, {
         email: args.email,
         password: args.password
       });
-      if (response.data.valid) {
-        return {
-          user: {
-            id: response.data.id,
-            type: UserType.Student
-          },
-          userClasses: []
+      if (response.data.success) {
+        const user ={
+          id: response.data.id,
+          type: UserType.Student
         };
+        const classes = await classesForUser(user);
+        this.context.commit("setUser", user);
+        this.context.commit("setUserClasses", classes);
       }
-      return { user: state.user, userClasses: state.userClasses };
+      return response.data;
     }
 
-    @MutationAction({ mutate: ["user", "userClasses"] })
-    async submitEducatorSignIn(args: { email: string, password: string }): Promise<{user:User, userClasses: ClassInfo[]}> {
-      const state = (this.state as CDSApiModule);
-      const response = await axios.post(`${SERVER_URL}/educator-login`, {
+    @Action({ rawError: true })
+    async submitEducatorSignIn(args: { email: string, password: string }): Promise<LoginResponse> {
+      const response = await axios.put(`${SERVER_URL}/educator-login`, {
         email: args.email,
         password: args.password
       });
-      console.log(response);
-      if (response.data.valid) {
-        const user = {
+      if (response.data.success) {
+        const user ={
           id: response.data.id,
           type: UserType.Educator
         };
-        const classes = await classesForEducator(user);
-        return { user: user, userClasses: classes };
+        const classes = await classesForUser(user);
+        this.context.commit("setUser", user);
+        this.context.commit("setUserClasses", classes);
       }
-      return { user: state.user, userClasses: state.userClasses };
+      return response.data;
+    }
+
+    @Mutation
+    logout(): void {
+      this.user = EMPTY_USER;
+      this.userClasses = [];
+    }
+
+    @Action({ rawError: true })
+    async validateClassroomCode(code: string): Promise<boolean> {
+      const response = await axios.get(`${SERVER_URL}/validate-classroom-code/${code}`);
+      return response.data.valid;
     }
 }
