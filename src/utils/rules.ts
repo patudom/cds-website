@@ -4,6 +4,10 @@ export const nameRules: Rule[] = [
   v => !!v || "Name is required"
 ];
 
+export const usernameRules: Rule[] = [
+  v => !!v || "Username is required"
+];
+
 export const emailRules: Rule[] = [
   v => !!v || "Email is required",
   v => /.+@.+\..+/.test(v) || "E-mail must be valid",
