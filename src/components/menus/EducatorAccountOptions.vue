@@ -37,12 +37,23 @@ export default class EducatorAccountOptions extends Vue {
   }
 
   goToRoute(route: string): void {
-    this.$router.push(route);
+    if (this.$route.path !== route) {
+      this.$router.push(route);
+    }
   }
   
   options: EducatorAccountOption[] = [
-    { title: "Manage Classrooms", action: () => this.goToRoute("/manage-classrooms") },
-    { title: "Log Out", action: this.logout },
+    {
+      title: "Manage Classrooms",
+      action: (): void => this.goToRoute("/manage-classrooms")
+    },
+    {
+      title: "Log Out",
+      action: (): void => {
+        this.logout();
+        this.goToRoute("/");
+      }
+    },
   ]
 
 }
