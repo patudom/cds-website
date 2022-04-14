@@ -49,7 +49,7 @@ export interface User {
 }
 
 // const SERVER_URL = "http://localhost:8080"
-const SERVER_URL = "http://cosmicdsapi-env.eba-tcbxbxhk.us-east-1.elasticbeanstalk.com";
+const SERVER_URL = "https://api.cosmicds.cfa.harvard.edu";
 
 async function classesForEducator(user: User): Promise<ClassInfo[]> {
   if (user.type !== UserType.Educator) {
