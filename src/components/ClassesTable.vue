@@ -35,14 +35,12 @@ export default class ClassesTable extends Vue {
   classes!: ClassInfo[];
 
   beforeCreate(): void {
-    console.log("In beforeCreate");
     this.$options.computed = {
       ...mapState(apiNamespace, {
         classes: (state, _getters) => (state as CDSApiModule).userClasses
       }),
       ...this.$options.computed
     };
-    console.log(this);
   }
 
 } 
