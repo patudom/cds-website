@@ -60,6 +60,16 @@
             :items="['Male', 'Female', 'Other']"
             label="Gender"
           ></v-select>
+          <v-checkbox
+            :rules="[checkboxTrueRule]"
+            required
+          >
+            <template v-slot:label>
+              <div>
+                I agree to <a target="_blank" href="https://www.cfa.harvard.edu/privacy-statement" @click.stop>this privacy policy</a>
+              </div>
+            </template>
+          </v-checkbox>
           <v-alert
             v-if="errorMessage"
             color="red lighten-2"
@@ -82,7 +92,7 @@
 
 <script lang="ts">
 import { Component } from "vue-property-decorator";
-import { emailRules, nameRules, passwordRules } from "@/utils/rules";
+import { checkboxTrueRule, emailRules, nameRules, passwordRules } from "@/utils/rules";
 import FormBase from "@/components/FormBase.vue";
 import { mapActions } from "vuex";
 
@@ -102,10 +112,11 @@ export default class CreateEducatorAccount extends FormBase {
   age = 33;
   gender = "Male";
 
-  valid = true;
+  valid = false;
   nameRules = nameRules;
   emailRules = emailRules;
   passwordRules = passwordRules;
+  checkboxTrueRule = checkboxTrueRule;
 
   errorMessage = "";
   successMessage = "";

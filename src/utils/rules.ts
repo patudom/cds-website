@@ -1,18 +1,21 @@
-export type Rule = (v: string) => boolean | string;
+type RuleResult = boolean | string;
+export type Rule<T> = (v: T) => RuleResult;
 
-export const nameRules: Rule[] = [
-  v => !!v || "Name is required"
+export const nameRules: Rule<string>[] = [
+  (v: string): RuleResult => !!v || "Name is required"
 ];
 
-export const usernameRules: Rule[] = [
-  v => !!v || "Username is required"
+export const usernameRules: Rule<string>[] = [
+  (v: string): RuleResult => !!v || "Username is required"
 ];
 
-export const emailRules: Rule[] = [
-  v => !!v || "Email is required",
-  v => /.+@.+\..+/.test(v) || "E-mail must be valid",
+export const emailRules: Rule<string>[] = [
+  (v: string): RuleResult => !!v || "Email is required",
+  (v: string): RuleResult => /.+@.+\..+/.test(v) || "E-mail must be valid",
 ];
 
-export const passwordRules: Rule[] = [
-  v => !!v || "Password is required"
+export const passwordRules: Rule<string>[] = [
+  (v: string): RuleResult => !!v || "Password is required"
 ];
+
+export const checkboxTrueRule: Rule<boolean> = v => !!v || "You must agree to continue";
