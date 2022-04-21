@@ -84,12 +84,16 @@ export default class Nav extends Vue {
 <style scoped>
 #nav-bar a {
   font-weight: bold;
-  color: #2c3e50;
   text-decoration: none;
   padding: 10px;
 }
-#nav-bar a.router-link-exact-active {
+
+a.router-link-active {
   color: var(--v-primary-base);
+}
+
+a.router-link-exact-active {
+  color: var(--v-accent-base);
 }
 
 #nav-logo {
