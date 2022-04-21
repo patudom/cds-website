@@ -106,7 +106,7 @@ export default class Login extends FormBase {
     return this.submitLogin({ email: this.email, password: this.password });
   }
 
-  responseErrorMessage(response: LoginResponse) {
+  responseErrorMessage(response: LoginResponse): string {
     switch (response.result) {
       case "email_not_exist":
         return `No ${this.loginType} account with this email exists`;

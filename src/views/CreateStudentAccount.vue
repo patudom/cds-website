@@ -53,6 +53,16 @@
             v-model="classroomCode"
             label="Classroom Code"
           ></v-text-field>
+          <v-checkbox
+            :rules="[checkboxTrueRule]"
+            required
+          >
+            <template v-slot:label>
+              <div>
+                I agree to <a target="_blank" href="https://www.cfa.harvard.edu/privacy-statement" @click.stop>this privacy policy</a>
+              </div>
+            </template>
+          </v-checkbox>
           <v-alert
             v-if="errorMessage"
             color="red lighten-2"
@@ -75,7 +85,7 @@
 
 <script lang="ts">
 import { Component } from "vue-property-decorator";
-import { emailRules, nameRules, passwordRules, usernameRules } from "@/utils/rules";
+import { checkboxTrueRule, emailRules, nameRules, passwordRules, usernameRules } from "@/utils/rules";
 import FormBase from "@/components/FormBase.vue";
 import { mapActions } from "vuex";
 
@@ -89,7 +99,7 @@ export default class CreateStudentAccount extends FormBase {
 
   username = "TestStudent";
   classroomCode = "";
-  valid = true;
+  valid = false;
   email = "teststudent@testschool.edu";
   password = "testpass";
   institution = "TestSchool";
@@ -99,6 +109,7 @@ export default class CreateStudentAccount extends FormBase {
   emailRules = emailRules;
   passwordRules = passwordRules;
   usernameRules = usernameRules;
+  checkboxTrueRule = checkboxTrueRule;
 
   errorMessage = "";
   successMessage = "";
@@ -119,6 +130,7 @@ export default class CreateStudentAccount extends FormBase {
   }
 
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   async submit(): Promise<any> {
     return this.submitStudentSignUp({
       username: this.username,
