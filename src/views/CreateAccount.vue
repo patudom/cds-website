@@ -10,7 +10,6 @@
         <span>Please create a free account to begin using the Cosmic Data Stories.</span>
         <v-dialog
           v-model="dialog"
-          transition="dialog-bottom-transition"
           content-class="info-dialog"
           >
           <template v-slot:activator="{ on, attrs }">
@@ -87,5 +86,7 @@ export default class CreateAccount extends Vue {
 
 >>> .info-dialog {
   max-width: 80%;
+  border-radius: 5px;
+  background: var(--v-secondary-base);
 }
 </style>

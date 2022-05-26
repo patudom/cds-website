@@ -51,6 +51,17 @@ const routes: Array<RouteConfig> = [
     path: "/student-account-created",
     name: "Student Account Created",
     component: importComponent("StudentAccountCreated")
+  },
+  {
+    path: "/roster-data/:classID",
+    name: "Roster Data",
+    component: importComponent("ClassInformation"),
+    props: true
+  },
+  {
+    path: "/current-activities",
+    name: "Current Activities",
+    component: importComponent("CurrentActivities")
   }
 ];
 

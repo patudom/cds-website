@@ -39,6 +39,7 @@ export interface LoginInfo {
 }
 
 export interface ClassInfo {
+  id: number;
   name: string;
   code: string;
 }
@@ -91,6 +92,19 @@ export class CDSApiModule extends VuexModule {
 
     get userType(): UserType {
       return this.user.type;
+    }
+
+    get userClass() {
+      return (classID: number): ClassInfo | undefined => {
+        return this.userClasses.find(cls => cls.id == classID);
+      };
+    }
+
+    get classBelongsToUser() {
+      return (classID: number): boolean => {
+        const ids = this.userClasses.map(cls => cls.id);
+        return ids.includes(classID);
+      };
     }
 
     @Mutation
@@ -161,6 +175,16 @@ export class CDSApiModule extends VuexModule {
         this.context.commit("setUser", user);
         this.context.commit("setUserClasses", classes);
       }
+      return response.data;
+    }
+
+    @Action({ rawError: true })
+    async fetchRosterData(args: { classID: number, storyName?: string }): Promise<Record<string,any>> {
+      let url = `${SERVER_URL}/roster-info/${args.classID}`;
+      if (args.storyName) {
+        url += `/${args.storyName}`;
+      }
+      const response = await axios.get(url);
       return response.data;
     }
 

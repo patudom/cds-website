@@ -10,9 +10,10 @@
       max-width="50"
       contain
     />
+    <v-spacer></v-spacer>
     <router-link to="/">Home</router-link>
     <router-link to="/create-account">Create Account</router-link>
-    <v-spacer></v-spacer>
+    <router-link to="/current-activities">Current Activities</router-link>
     <v-btn
       icon
       @click="toggleDarkMode"
@@ -82,10 +83,10 @@ export default class Nav extends Vue {
 
 
 <style scoped>
-#nav-bar a {
-  font-weight: bold;
+
+a {
   text-decoration: none;
-  padding: 10px;
+  padding: 20px;
 }
 
 a.router-link-active {
