@@ -14,7 +14,7 @@
 <script lang="ts">
 import { apiNamespace } from "@/store";
 import { Component, Vue } from "vue-property-decorator";
-import { mapMutations } from "vuex";
+import { mapActions } from "vuex";
 
 type Action = () => void;
 type EducatorAccountOption = {
@@ -25,13 +25,13 @@ type EducatorAccountOption = {
 @Component
 export default class EducatorAccountOptions extends Vue {
 
-  logout!: () => void;
+  submitLogout!: () => void;
 
   beforeCreate(): void {
     this.$options.methods = {
       ...this.$options.methods,
-      ...mapMutations(apiNamespace, [
-        "logout"
+      ...mapActions(apiNamespace, [
+        "submitLogout"
       ])
     };
   }
@@ -50,7 +50,7 @@ export default class EducatorAccountOptions extends Vue {
     {
       title: "Log Out",
       action: (): void => {
-        this.logout();
+        this.submitLogout();
         this.goToRoute("/");
       }
     },

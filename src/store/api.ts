@@ -55,10 +55,10 @@ export interface LoginResponse {
 }
 
 // For local testing
-// const SERVER_URL = "http://localhost:8080";
+const SERVER_URL = "http://192.168.99.136:8080";
 
 // AWS EBS app
-const SERVER_URL = "https://api.cosmicds.cfa.harvard.edu";
+//const SERVER_URL = "https://api.cosmicds.cfa.harvard.edu";
 
 async function classesForUser(user: User): Promise<ClassInfo[]> {
   if (user.type !== UserType.Educator && user.type !== UserType.Student) {
@@ -192,6 +192,15 @@ export class CDSApiModule extends VuexModule {
     logout(): void {
       this.user = EMPTY_USER;
       this.userClasses = [];
+    }
+
+    @Action({ rawError: true })
+    async submitLogout(): Promise<void> {
+      const response = await axios.get(`${SERVER_URL}/logout`);
+      console.log(response);
+      if (response.data.logout) {
+        this.context.commit("logout");
+      }
     }
 
     @Action({ rawError: true })

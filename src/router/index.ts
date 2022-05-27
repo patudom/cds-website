@@ -1,6 +1,7 @@
 import Vue from "vue";
 import VueRouter, { RouteConfig } from "vue-router";
 import Home from "../views/Home.vue";
+import store from "@/store";
 
 Vue.use(VueRouter);
 
@@ -25,22 +26,26 @@ const routes: Array<RouteConfig> = [
   {
     path: "/login",
     name: "Login",
-    component: importComponent("Login")
+    component: importComponent("Login"),
+    meta: { guest: true }
   },
   {
     path: "/educator-create",
     name: "Create Educator Account",
-    component: importComponent("CreateEducatorAccount")
+    component: importComponent("CreateEducatorAccount"),
+    meta: { guest: true }
   },
   {
     path: "/student-create",
     name: "Create Student Account",
-    component: importComponent("CreateStudentAccount")
+    component: importComponent("CreateStudentAccount"),
+    meta: { guest: true }
   },
   {
     path: "/manage-classrooms",
     name: "Manage Classrooms",
-    component: importComponent("ManageClasses")
+    component: importComponent("ManageClasses"),
+    meta: { requiresAuth: true }
   },
   {
     path: "/educator-account-created",
@@ -56,12 +61,13 @@ const routes: Array<RouteConfig> = [
     path: "/roster-data/:classID",
     name: "Roster Data",
     component: importComponent("ClassInformation"),
-    props: true
+    props: true,
+    meta: { requiresAuth: true }
   },
   {
     path: "/current-activities",
     name: "Current Activities",
-    component: importComponent("CurrentActivities")
+    component: importComponent("CurrentActivities"),
   }
 ];
 
@@ -69,6 +75,27 @@ const router = new VueRouter({
   mode: "history",
   base: process.env.BASE_URL,
   routes
+});
+
+router.beforeEach((to, _from, next) => {
+  const isAuthenticated = store.getters["api/userId"] != -1;
+  // if (!isAuthenticated) {
+  //   const loginCookie = Vue.$cookies.get("cosmicds");
+
+  // }
+  if (to.matched.some(record => record.meta.requiresAuth)) {
+    if (isAuthenticated) {
+      next();
+      return;
+    }
+    next("/login");
+  } else if (to.matched.some(record => record.meta.guest)) {
+    if (isAuthenticated) {
+      next("/manage-classrooms");
+      return;
+    }
+  }
+  next();
 });
 
 export default router;
