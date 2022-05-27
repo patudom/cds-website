@@ -100,6 +100,10 @@ export class CDSApiModule extends VuexModule {
       };
     }
 
+    get isLoggedIn(): boolean {
+      return this.user.id != -1 && this.userType != UserType.None;
+    }
+
     get classBelongsToUser() {
       return (classID: number): boolean => {
         const ids = this.userClasses.map(cls => cls.id);
@@ -167,7 +171,22 @@ export class CDSApiModule extends VuexModule {
         password: args.password
       });
       if (response.data.success) {
-        const user ={
+        const user = {
+          id: response.data.id,
+          type: UserType.Educator
+        };
+        const classes = await classesForUser(user);
+        this.context.commit("setUser", user);
+        this.context.commit("setUserClasses", classes);
+      }
+      return response.data;
+    }
+
+    @Action({ rawError: true })
+    async submitSessionLogin(): Promise<LoginResponse> {
+      const response = await axios.put(`${SERVER_URL}/login`);
+      if (response.data.success) {
+        const user = {
           id: response.data.id,
           type: UserType.Educator
         };
