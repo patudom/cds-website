@@ -21,7 +21,8 @@ const routes: Array<RouteConfig> = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: importComponent("CreateAccount")
+    component: importComponent("CreateAccount"),
+    meta: { guest: true }
   },
   {
     path: "/login",
@@ -77,12 +78,13 @@ const router = new VueRouter({
   routes
 });
 
-router.beforeEach((to, _from, next) => {
-  const isAuthenticated = store.getters["api/userId"] != -1;
-  // if (!isAuthenticated) {
-  //   const loginCookie = Vue.$cookies.get("cosmicds");
-
-  // }
+router.beforeEach(async (to, _from, next) => {
+  let isAuthenticated = store.getters["api/isLoggedIn"];
+  if (!isAuthenticated) {
+    const response = await store.dispatch("api/submitSessionLogin");
+    console.log(response);
+  }
+  isAuthenticated = store.getters["api/isLoggedIn"];
   if (to.matched.some(record => record.meta.requiresAuth)) {
     if (isAuthenticated) {
       next();
