@@ -55,10 +55,10 @@ export interface LoginResponse {
 }
 
 // For local testing
-const SERVER_URL = "http://192.168.99.136:8080";
+//const SERVER_URL = "http://192.168.99.136:8080";
 
 // AWS EBS app
-//const SERVER_URL = "https://api.cosmicds.cfa.harvard.edu";
+const SERVER_URL = "https://api.cosmicds.cfa.harvard.edu";
 
 async function classesForUser(user: User): Promise<ClassInfo[]> {
   if (user.type !== UserType.Educator && user.type !== UserType.Student) {
