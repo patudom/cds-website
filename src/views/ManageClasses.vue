@@ -15,20 +15,48 @@
         If you teach multiple sections of a course, create a separate classroom code for each section.
       </v-col>
     </v-row>
-    <classes-table/>
+    <v-container
+      v-for="(cls, index) in classes"
+      :key="index"
+    >
+      <v-row>
+        <v-col cols="6">
+          <router-link :to="{ path: `roster-data/${cls.id}`, params: { name: cls.name, code: cls.code }}">{{ cls.name }}</router-link>
+        </v-col>
+        <v-col cols="6">
+          {{ cls.code }}
+        </v-col>
+      </v-row>
+    </v-container>
+    <add-class/>
   </v-container>
 </template>
 
 <script lang="ts">
-import ClassesTable from "@/components/ClassesTable.vue";
 import { Component, Vue } from "vue-property-decorator";
+import { mapState } from "vuex";
+
+import { apiNamespace } from "@/store";
+import { CDSApiModule, ClassInfo } from "@/store/api";
+import AddClass from "@/components/AddClass.vue";
 
 @Component({
   components: {
-    "classes-table": ClassesTable,
+    "add-class": AddClass,
   }
 })
 export default class ManageClasses extends Vue {
+
+  classes!: ClassInfo[];
+
+  beforeCreate(): void {
+    this.$options.computed = {
+      ...mapState(apiNamespace, {
+        classes: (state, _getters) => (state as CDSApiModule).userClasses
+      }),
+      ...this.$options.computed
+    };
+  }
 
 }
 

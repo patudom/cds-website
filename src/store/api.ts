@@ -39,6 +39,7 @@ export interface LoginInfo {
 }
 
 export interface ClassInfo {
+  id: number;
   name: string;
   code: string;
 }
@@ -54,7 +55,7 @@ export interface LoginResponse {
 }
 
 // For local testing
-// const SERVER_URL = "http://localhost:8080";
+//const SERVER_URL = "http://192.168.99.136:8080";
 
 // AWS EBS app
 const SERVER_URL = "https://api.cosmicds.cfa.harvard.edu";
@@ -91,6 +92,23 @@ export class CDSApiModule extends VuexModule {
 
     get userType(): UserType {
       return this.user.type;
+    }
+
+    get userClass() {
+      return (classID: number): ClassInfo | undefined => {
+        return this.userClasses.find(cls => cls.id == classID);
+      };
+    }
+
+    get isLoggedIn(): boolean {
+      return this.user.id != -1 && this.userType != UserType.None;
+    }
+
+    get classBelongsToUser() {
+      return (classID: number): boolean => {
+        const ids = this.userClasses.map(cls => cls.id);
+        return ids.includes(classID);
+      };
     }
 
     @Mutation
@@ -153,7 +171,7 @@ export class CDSApiModule extends VuexModule {
         password: args.password
       });
       if (response.data.success) {
-        const user ={
+        const user = {
           id: response.data.id,
           type: UserType.Educator
         };
@@ -164,10 +182,44 @@ export class CDSApiModule extends VuexModule {
       return response.data;
     }
 
+    @Action({ rawError: true })
+    async submitSessionLogin(): Promise<LoginResponse> {
+      const response = await axios.put(`${SERVER_URL}/login`);
+      if (response.data.success) {
+        const user = {
+          id: response.data.id,
+          type: UserType.Educator
+        };
+        const classes = await classesForUser(user);
+        this.context.commit("setUser", user);
+        this.context.commit("setUserClasses", classes);
+      }
+      return response.data;
+    }
+
+    @Action({ rawError: true })
+    async fetchRosterData(args: { classID: number, storyName?: string }): Promise<Record<string,any>> {
+      let url = `${SERVER_URL}/roster-info/${args.classID}`;
+      if (args.storyName) {
+        url += `/${args.storyName}`;
+      }
+      const response = await axios.get(url);
+      return response.data;
+    }
+
     @Mutation
     logout(): void {
       this.user = EMPTY_USER;
       this.userClasses = [];
+    }
+
+    @Action({ rawError: true })
+    async submitLogout(): Promise<void> {
+      const response = await axios.get(`${SERVER_URL}/logout`);
+      console.log(response);
+      if (response.data.logout) {
+        this.context.commit("logout");
+      }
     }
 
     @Action({ rawError: true })

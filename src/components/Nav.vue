@@ -10,9 +10,12 @@
       max-width="50"
       contain
     />
-    <router-link to="/">Home</router-link>
-    <router-link to="/create-account">Create Account</router-link>
     <v-spacer></v-spacer>
+    <router-link to="/">Home</router-link>
+    <router-link 
+      v-if="!loggedIn"
+      to="/create-account">Create Account</router-link>
+    <router-link to="/current-activities">Current Activities</router-link>
     <v-btn
       icon
       @click="toggleDarkMode"
@@ -45,7 +48,6 @@
 import { Component, Vue } from "vue-property-decorator";
 import { mapMutations, mapState } from "vuex";
 
-import { CDSApiModule, User, UserType } from "@/store/api";
 import { apiNamespace, websiteNamespace } from "@/store";
 import EducatorAccountOptions from "@/components/menus/EducatorAccountOptions.vue";
 
@@ -53,7 +55,7 @@ import EducatorAccountOptions from "@/components/menus/EducatorAccountOptions.vu
 export default class Nav extends Vue {
 
   menu = EducatorAccountOptions;
-  user!: User;
+  loggedIn!: boolean;
 
   beforeCreate(): void {
     this.$options.methods = {
@@ -62,30 +64,22 @@ export default class Nav extends Vue {
     };
     this.$options.computed = {
       ...mapState(apiNamespace, {
-        user: (state, _getters) => {
-          return (state as CDSApiModule).user;
+        loggedIn: (_state, getters) => {
+          return getters["isLoggedIn"];
         }
       }),
       ...this.$options.computed
     };
-    console.log(this);
-  }
-
-  get loggedIn(): boolean {
-    if (this.user === undefined) {
-      return false;
-    }
-    return this.user.type !== UserType.None;
   }
 }
 </script>
 
 
 <style scoped>
-#nav-bar a {
-  font-weight: bold;
+
+a {
   text-decoration: none;
-  padding: 10px;
+  padding: 20px;
 }
 
 a.router-link-active {
