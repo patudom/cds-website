@@ -90,16 +90,6 @@
       </ImageSet>
     </ForegroundImageSet>
   </Place>
-  <Place Angle="0" AngularSize="0" DataSetType="Sky" Dec="61.21199499018043" Magnitude="0" Name="1/24/2023" Opacity="100" RA="15.135065130784286" Rotation="0" ZoomLevel="10">
-    <ForegroundImageSet>
-      <ImageSet BandPass="Visible" BaseDegreesPerTile="0.0015114672495204523" BaseTileLevel="0" BottomsUp="False" CenterX="227.0259769617643" CenterY="61.21199499018043" DataSetType="Sky" ElevationModel="False" FileType=".jpg" Generic="False" Name="1/24/2023" OffsetX="750.5" OffsetY="1109.5" Projection="SkyImage" QuadTreeMap="" Rotation="-89.85332625059537" Sparse="True" StockSet="False" TileLevels="0" Url="https://raw.githubusercontent.com/johnarban/wwt_interactives/main/images/702_2022E3_24_01_23_1_inverted_tagged.jpg" WidthFactor="2">
-        <Credits>credits</Credits>
-        <CreditsUrl>credits_url</CreditsUrl>
-        <Description>description</Description>
-        <ThumbnailUrl>https://nova.astrometry.net/image/16942765</ThumbnailUrl>
-      </ImageSet>
-    </ForegroundImageSet>
-  </Place>
   <Place Angle="0" AngularSize="0" DataSetType="Sky" Dec="62.54128255525035" Magnitude="0" Name="1/24/2023" Opacity="100" RA="14.979153471394078" Rotation="0" ZoomLevel="10">
     <ForegroundImageSet>
       <ImageSet BandPass="Visible" BaseDegreesPerTile="0.0016850083428044354" BaseTileLevel="0" BottomsUp="False" CenterX="224.68730207091116" CenterY="62.54128255525035" DataSetType="Sky" ElevationModel="False" FileType=".jpg" Generic="False" Name="1/24/2023" OffsetX="1000.5" OffsetY="660" Projection="SkyImage" QuadTreeMap="" Rotation="-1.880159957122086" Sparse="True" StockSet="False" TileLevels="0" Url="https://raw.githubusercontent.com/johnarban/wwt_interactives/main/images/703_2022E3_24_01_23_2_inverted_tagged.jpg" WidthFactor="2">
