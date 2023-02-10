@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Folder Browseable="True" Group="Explorer" Name="Folder" Searchable="True">
+  <Place Angle="0" AngularSize="0" DataSetType="Sky" Dec="61.21199499018043" Magnitude="0" Name="1/24/2023" Opacity="100" RA="15.135065130784286" Rotation="0" ZoomLevel="10">
+    <ForegroundImageSet>
+      <ImageSet BandPass="Visible" BaseDegreesPerTile="0.0015114672495204523" BaseTileLevel="0" BottomsUp="False" CenterX="227.0259769617643" CenterY="61.21199499018043" DataSetType="Sky" ElevationModel="False" FileType=".jpg" Generic="False" Name="1/24/2023" OffsetX="750.5" OffsetY="1109.5" Projection="SkyImage" QuadTreeMap="" Rotation="-89.85332625059537" Sparse="True" StockSet="False" TileLevels="0" Url="https://raw.githubusercontent.com/johnarban/wwt_interactives/main/images/702_2022E3_24_01_23_1_inverted_tagged.jpg" WidthFactor="2">
+        <Credits>credits</Credits>
+        <CreditsUrl>credits_url</CreditsUrl>
+        <Description>description</Description>
+        <ThumbnailUrl>https://nova.astrometry.net/image/16942765</ThumbnailUrl>
+      </ImageSet>
+    </ForegroundImageSet>
+  </Place>
+  <Place Angle="0" AngularSize="0" DataSetType="Sky" Dec="62.54128255525035" Magnitude="0" Name="1/24/2023" Opacity="100" RA="14.979153471394078" Rotation="0" ZoomLevel="10">
+    <ForegroundImageSet>
+      <ImageSet BandPass="Visible" BaseDegreesPerTile="0.0016850083428044354" BaseTileLevel="0" BottomsUp="False" CenterX="224.68730207091116" CenterY="62.54128255525035" DataSetType="Sky" ElevationModel="False" FileType=".jpg" Generic="False" Name="1/24/2023" OffsetX="1000.5" OffsetY="660" Projection="SkyImage" QuadTreeMap="" Rotation="-1.880159957122086" Sparse="True" StockSet="False" TileLevels="0" Url="https://raw.githubusercontent.com/johnarban/wwt_interactives/main/images/703_2022E3_24_01_23_2_inverted_tagged.jpg" WidthFactor="2">
+        <Credits>credits</Credits>
+        <CreditsUrl>credits_url</CreditsUrl>
+        <Description>description</Description>
+        <ThumbnailUrl>https://nova.astrometry.net/image/16942765</ThumbnailUrl>
+      </ImageSet>
+    </ForegroundImageSet>
+  </Place>
+  <Place Angle="0" AngularSize="0" DataSetType="Sky" Dec="79.4753231991739" Magnitude="0" Name="1/29/2023" Opacity="100" RA="11.545937068481974" Rotation="0" ZoomLevel="10">
+    <ForegroundImageSet>
+      <ImageSet BandPass="Visible" BaseDegreesPerTile="0.0008365058835737894" BaseTileLevel="0" BottomsUp="False" CenterX="173.1890560272296" CenterY="79.4753231991739" DataSetType="Sky" ElevationModel="False" FileType=".jpg" Generic="False" Name="1/29/2023" OffsetX="950.5" OffsetY="639.5" Projection="SkyImage" QuadTreeMap="" Rotation="90.71376566973909" Sparse="True" StockSet="False" TileLevels="0" Url="https://raw.githubusercontent.com/johnarban/wwt_interactives/main/images/704_2022E3_29_01_23_inverted_tagged.jpg" WidthFactor="2">
+        <Credits>credits</Credits>
+        <CreditsUrl>credits_url</CreditsUrl>
+        <Description>description</Description>
+        <ThumbnailUrl>https://nova.astrometry.net/image/16942765</ThumbnailUrl>
+      </ImageSet>
+    </ForegroundImageSet>
+  </Place>
+  <Place Angle="0" AngularSize="0" DataSetType="Sky" Dec="42.42479591151067" Magnitude="0" Name="2/6/2023" Opacity="100" RA="5.061963928449675" Rotation="0" ZoomLevel="10">
+    <ForegroundImageSet>
+      <ImageSet BandPass="Visible" BaseDegreesPerTile="0.0008020867999629951" BaseTileLevel="0" BottomsUp="False" CenterX="75.92945892674513" CenterY="42.42479591151067" DataSetType="Sky" ElevationModel="False" FileType=".jpg" Generic="False" Name="2/6/2023" OffsetX="700.5" OffsetY="1042.5" Projection="SkyImage" QuadTreeMap="" Rotation="-179.70032194448078" Sparse="True" StockSet="False" TileLevels="0" Url="https://raw.githubusercontent.com/johnarban/wwt_interactives/main/images/705_2022E3_06_02_23_inverted_tagged.jpg" WidthFactor="2">
+        <Credits>credits</Credits>
+        <CreditsUrl>credits_url</CreditsUrl>
+        <Description>description</Description>
+        <ThumbnailUrl>https://nova.astrometry.net/image/16942765</ThumbnailUrl>
+      </ImageSet>
+    </ForegroundImageSet>
+  </Place>
+</Folder>
