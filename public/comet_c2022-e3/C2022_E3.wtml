@@ -96,7 +96,7 @@
         <Credits>credits</Credits>
         <CreditsUrl>credits_url</CreditsUrl>
         <Description>description</Description>
-        <ThumbnailUrl>https://nova.astrometry.net/image/16942765</ThumbnailUrl>
+        <ThumbnailUrl>https://github.com/cosmicds/cds-website/raw/main/public/comet_c2022-e3/thumbnails/703_2022E3_24_01_23_2.jpg</ThumbnailUrl>
       </ImageSet>
     </ForegroundImageSet>
   </Place>
@@ -106,7 +106,7 @@
         <Credits>credits</Credits>
         <CreditsUrl>credits_url</CreditsUrl>
         <Description>description</Description>
-        <ThumbnailUrl>https://nova.astrometry.net/image/16942765</ThumbnailUrl>
+        <ThumbnailUrl>https://github.com/cosmicds/cds-website/raw/main/public/comet_c2022-e3/thumbnails/704_2022E3_29_01_23.jpg</ThumbnailUrl>
       </ImageSet>
     </ForegroundImageSet>
   </Place>
@@ -116,7 +116,7 @@
         <Credits>credits</Credits>
         <CreditsUrl>credits_url</CreditsUrl>
         <Description>description</Description>
-        <ThumbnailUrl>https://nova.astrometry.net/image/16942765</ThumbnailUrl>
+        <ThumbnailUrl>https://github.com/cosmicds/cds-website/raw/main/public/comet_c2022-e3/thumbnails/705_2022E3_06_02_23.jpg</ThumbnailUrl>
       </ImageSet>
     </ForegroundImageSet>
   </Place>
