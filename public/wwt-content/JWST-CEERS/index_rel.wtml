@@ -2,7 +2,7 @@
 <Folder Browseable="True" Group="Explorer" Name="JWST-CEERS" Searchable="True">
   <Place Angle="0" AngularSize="0" Constellation="BOO" DataSetType="Sky" Dec="52.873581628263366" Magnitude="0" Name="JWST-CEERS" Opacity="100" RA="14.324974420894963" Rotation="0" Thumbnail="thumb.jpg" ZoomLevel="0.6563892517892096">
     <ForegroundImageSet>
-      <ImageSet BandPass="Visible" BaseDegreesPerTile="0.06830405050908755" BaseTileLevel="0" BottomsUp="False" CenterX="214.90548914905" CenterY="52.90510189439" DataSetType="Sky" ElevationModel="False" FileType=".png" Generic="False" Name="JWST-CEERS" OffsetX="0.006237826530364376" OffsetY="0.036078332724636626" Projection="Tan" QuadTreeMap="" Rotation="-139.60331012174345" Sparse="True" StockSet="False" TileLevels="5" Url="{1}/{3}/{3}_{2}.png" WidthFactor="2">
+      <ImageSet BandPass="Visible" BaseDegreesPerTile="0.06830405050908755" BaseTileLevel="0" BottomsUp="False" CenterX="214.90548914905" CenterY="52.90510189439" DataSetType="Sky" ElevationModel="False" FileType=".png" Generic="False" Name="JWST-CEERS" OffsetX="0.006237826530364376" OffsetY="0.036078332724636626" Projection="Tan" QuadTreeMap="" Rotation="-139.60331012174345" Sparse="True" StockSet="False" TileLevels="5" Url="https://cosmicds.github.io/cds-website/wwt-content/JWST-CEERS/{1}/{3}/{3}_{2}.png" WidthFactor="2">
         <Credits>NASA, ESA, CSA, S. Finklestein, M. Bagley, R. Larson (UT),  and A. Pagan (STScI)</Credits>
         <CreditsUrl>https://webbtelescope.org/contents/news-releases/2023/news-2023-114</CreditsUrl>
         <ThumbnailUrl>thumb.jpg</ThumbnailUrl>
