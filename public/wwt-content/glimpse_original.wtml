@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Folder Browseable="True" Group="Explorer" Name="GLIMPSE" Searchable="True">
+    <Place
+      Angle="0"
+      AngularSize="360"
+      Classification="Galactic"
+      Constellation="SGR"
+      DataSetType="Sky"
+      Dec="-28.9"
+      Magnitude="0"
+      Name="GLIMPSE Original"
+      Opacity="100"
+      RA="17.75"
+      Rotation="0"
+      ZoomLevel="200"
+    >
+      <ForegroundImageSet>
+        <ImageSet
+          BandPass="IR"
+          BaseDegreesPerTile="180"
+          BaseTileLevel="0"
+          BottomsUp="False"
+          CenterX="0"
+          CenterY="0"
+          DataSetType="Sky"
+          ElevationModel="False"
+          FileType=".png"
+          Generic="False"
+          Name="GLIMPSE Original"
+          Projection="Toast"
+          QuadTreeMap=""
+          Rotation="0"
+          Sparse="False"
+          StockSet="False"
+          TileLevels="11"
+          Url="http://www.worldwidetelescope.org/wwtweb/glimpse.aspx?q={1},{2},{3}"
+          WidthFactor="2"
+        >
+          <Credits>NASA/JPL-Caltech/Univ. of Wisconsin. The GLIMPSE survey was performed using the Spitzer Space Telescope.</Credits>
+          <CreditsUrl>http://www.astro.wisc.edu/sirtf/</CreditsUrl>
+          <ThumbnailUrl>http://www.worldwidetelescope.org/wwtweb/thumbnail.aspx?name=glimpsetn</ThumbnailUrl>
+        </ImageSet>
+      </ForegroundImageSet>
+    </Place>
+</Folder>
