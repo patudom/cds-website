@@ -2,7 +2,7 @@
 <Folder Browseable="True" Group="Explorer" Name="Folder" Searchable="True">
   <Place Angle="0" AngularSize="0" DataSetType="Sky" Dec="27.435348234401395" Magnitude="0" Name="12/18/2022" Opacity="100" RA="15.889722339073499" Rotation="0" ZoomLevel="10">
     <ForegroundImageSet>
-      <ImageSet BandPass="Visible" BaseDegreesPerTile="0.0017142394773233902" BaseTileLevel="0" BottomsUp="False" CenterX="238.34583508610248" CenterY="27.435348234401395" DataSetType="Sky" ElevationModel="False" FileType=".jpg" Generic="False" Name="12/18/2022" OffsetX="400.5" OffsetY="324.5" Projection="SkyImage" QuadTreeMap="" Rotation="90.92840756670508" Sparse="True" StockSet="False" TileLevels="0" Url="https://raw.githubusercontent.com/cosmicds/minids/main/green-comet/src/assets/687_2022E3_18_12_inverted_tagged.jpg" WidthFactor="2">
+      <ImageSet BandPass="Visible" BaseDegreesPerTile="0.0017142394773233902" BaseTileLevel="0" BottomsUp="False" CenterX="238.34583508610248" CenterY="27.435348234401395" DataSetType="Sky" ElevationModel="False" FileType=".jpg" Generic="False" Name="12/18/2022" OffsetX="400.5" OffsetY="324.5" Projection="SkyImage" QuadTreeMap="" Rotation="90.92840756670508" Sparse="True" StockSet="False" TileLevels="0" Url="https://raw.githubusercontent.com/cosmicds/green-comet/main/src/assets/687_2022E3_18_12_inverted_tagged.jpg" WidthFactor="2">
         <Credits>credits</Credits>
         <CreditsUrl>credits_url</CreditsUrl>
         <Description>description</Description>
@@ -12,7 +12,7 @@
   </Place>
   <Place Angle="0" AngularSize="0" DataSetType="Sky" Dec="29.594694500528576" Magnitude="0" Name="12/27/2022" Opacity="100" RA="15.885267696119373" Rotation="0" ZoomLevel="10">
     <ForegroundImageSet>
-      <ImageSet BandPass="Visible" BaseDegreesPerTile="0.0018081717090626251" BaseTileLevel="0" BottomsUp="False" CenterX="238.2790154417906" CenterY="29.594694500528576" DataSetType="Sky" ElevationModel="False" FileType=".jpg" Generic="False" Name="12/27/2022" OffsetX="400.5" OffsetY="305" Projection="SkyImage" QuadTreeMap="" Rotation="91.21368995984798" Sparse="True" StockSet="False" TileLevels="0" Url="https://raw.githubusercontent.com/cosmicds/minids/main/green-comet/src/assets/688_2022E3_27_12_inverted_tagged.jpg" WidthFactor="2">
+      <ImageSet BandPass="Visible" BaseDegreesPerTile="0.0018081717090626251" BaseTileLevel="0" BottomsUp="False" CenterX="238.2790154417906" CenterY="29.594694500528576" DataSetType="Sky" ElevationModel="False" FileType=".jpg" Generic="False" Name="12/27/2022" OffsetX="400.5" OffsetY="305" Projection="SkyImage" QuadTreeMap="" Rotation="91.21368995984798" Sparse="True" StockSet="False" TileLevels="0" Url="https://raw.githubusercontent.com/cosmicds/green-comet/main/src/assets/688_2022E3_27_12_inverted_tagged.jpg" WidthFactor="2">
         <Credits>credits</Credits>
         <CreditsUrl>credits_url</CreditsUrl>
         <Description>description</Description>
@@ -22,7 +22,7 @@
   </Place>
   <Place Angle="0" AngularSize="0" DataSetType="Sky" Dec="30.06135235969306" Magnitude="0" Name="12/28/2022" Opacity="100" RA="15.876823348284313" Rotation="0" ZoomLevel="10">
     <ForegroundImageSet>
-      <ImageSet BandPass="Visible" BaseDegreesPerTile="0.0017960227845979114" BaseTileLevel="0" BottomsUp="False" CenterX="238.1523502242647" CenterY="30.06135235969306" DataSetType="Sky" ElevationModel="False" FileType=".jpg" Generic="False" Name="12/28/2022" OffsetX="400.5" OffsetY="309.5" Projection="SkyImage" QuadTreeMap="" Rotation="91.00631499552722" Sparse="True" StockSet="False" TileLevels="0" Url="https://raw.githubusercontent.com/cosmicds/minids/main/green-comet/src/assets/689_2022E3_28_12_inverted_tagged.jpg" WidthFactor="2">
+      <ImageSet BandPass="Visible" BaseDegreesPerTile="0.0017960227845979114" BaseTileLevel="0" BottomsUp="False" CenterX="238.1523502242647" CenterY="30.06135235969306" DataSetType="Sky" ElevationModel="False" FileType=".jpg" Generic="False" Name="12/28/2022" OffsetX="400.5" OffsetY="309.5" Projection="SkyImage" QuadTreeMap="" Rotation="91.00631499552722" Sparse="True" StockSet="False" TileLevels="0" Url="https://raw.githubusercontent.com/cosmicds/green-comet/main/src/assets/689_2022E3_28_12_inverted_tagged.jpg" WidthFactor="2">
         <Credits>credits</Credits>
         <CreditsUrl>credits_url</CreditsUrl>
         <Description>description</Description>
@@ -32,7 +32,7 @@
   </Place>
   <Place Angle="0" AngularSize="0" DataSetType="Sky" Dec="30.304865576062944" Magnitude="0" Name="12/29/2022" Opacity="100" RA="15.870840298697768" Rotation="0" ZoomLevel="10">
     <ForegroundImageSet>
-      <ImageSet BandPass="Visible" BaseDegreesPerTile="0.001368677231666053" BaseTileLevel="0" BottomsUp="False" CenterX="238.06260448046652" CenterY="30.304865576062944" DataSetType="Sky" ElevationModel="False" FileType=".jpg" Generic="False" Name="12/29/2022" OffsetX="400.5" OffsetY="455.5" Projection="SkyImage" QuadTreeMap="" Rotation="0.7362467748864256" Sparse="True" StockSet="False" TileLevels="0" Url="https://raw.githubusercontent.com/cosmicds/minids/main/green-comet/src/assets/690_2022E3_29_12_inverted_tagged.jpg" WidthFactor="2">
+      <ImageSet BandPass="Visible" BaseDegreesPerTile="0.001368677231666053" BaseTileLevel="0" BottomsUp="False" CenterX="238.06260448046652" CenterY="30.304865576062944" DataSetType="Sky" ElevationModel="False" FileType=".jpg" Generic="False" Name="12/29/2022" OffsetX="400.5" OffsetY="455.5" Projection="SkyImage" QuadTreeMap="" Rotation="0.7362467748864256" Sparse="True" StockSet="False" TileLevels="0" Url="https://raw.githubusercontent.com/cosmicds/green-comet/main/src/assets/690_2022E3_29_12_inverted_tagged.jpg" WidthFactor="2">
         <Credits>credits</Credits>
         <CreditsUrl>credits_url</CreditsUrl>
         <Description>description</Description>
@@ -42,7 +42,7 @@
   </Place>
   <Place Angle="0" AngularSize="0" DataSetType="Sky" Dec="31.55074617443531" Magnitude="0" Name="1/1/2023" Opacity="100" RA="15.85905648442954" Rotation="0" ZoomLevel="10">
     <ForegroundImageSet>
-      <ImageSet BandPass="Visible" BaseDegreesPerTile="0.0019585642820656654" BaseTileLevel="0" BottomsUp="False" CenterX="237.8858472664431" CenterY="31.55074617443531" DataSetType="Sky" ElevationModel="False" FileType=".jpg" Generic="False" Name="1/1/2023" OffsetX="400.5" OffsetY="287.5" Projection="SkyImage" QuadTreeMap="" Rotation="-89.09917483854268" Sparse="True" StockSet="False" TileLevels="0" Url="https://raw.githubusercontent.com/cosmicds/minids/main/green-comet/src/assets/691_2022E3_01_01_23_inverted_tagged.jpg" WidthFactor="2">
+      <ImageSet BandPass="Visible" BaseDegreesPerTile="0.0019585642820656654" BaseTileLevel="0" BottomsUp="False" CenterX="237.8858472664431" CenterY="31.55074617443531" DataSetType="Sky" ElevationModel="False" FileType=".jpg" Generic="False" Name="1/1/2023" OffsetX="400.5" OffsetY="287.5" Projection="SkyImage" QuadTreeMap="" Rotation="-89.09917483854268" Sparse="True" StockSet="False" TileLevels="0" Url="https://raw.githubusercontent.com/cosmicds/green-comet/main/src/assets/691_2022E3_01_01_23_inverted_tagged.jpg" WidthFactor="2">
         <Credits>credits</Credits>
         <CreditsUrl>credits_url</CreditsUrl>
         <Description>description</Description>
@@ -52,7 +52,7 @@
   </Place>
   <Place Angle="0" AngularSize="0" DataSetType="Sky" Dec="32.04764555280646" Magnitude="0" Name="1/2/2023" Opacity="100" RA="15.849510268431588" Rotation="0" ZoomLevel="10">
     <ForegroundImageSet>
-      <ImageSet BandPass="Visible" BaseDegreesPerTile="0.0020139332190545426" BaseTileLevel="0" BottomsUp="False" CenterX="237.74265402647382" CenterY="32.04764555280646" DataSetType="Sky" ElevationModel="False" FileType=".jpg" Generic="False" Name="1/2/2023" OffsetX="400.5" OffsetY="284" Projection="SkyImage" QuadTreeMap="" Rotation="-89.06309314604557" Sparse="True" StockSet="False" TileLevels="0" Url="https://raw.githubusercontent.com/cosmicds/minids/main/green-comet/src/assets/692_2022E3_02_01_23_inverted_tagged.jpg" WidthFactor="2">
+      <ImageSet BandPass="Visible" BaseDegreesPerTile="0.0020139332190545426" BaseTileLevel="0" BottomsUp="False" CenterX="237.74265402647382" CenterY="32.04764555280646" DataSetType="Sky" ElevationModel="False" FileType=".jpg" Generic="False" Name="1/2/2023" OffsetX="400.5" OffsetY="284" Projection="SkyImage" QuadTreeMap="" Rotation="-89.06309314604557" Sparse="True" StockSet="False" TileLevels="0" Url="https://raw.githubusercontent.com/cosmicds/green-comet/main/src/assets/692_2022E3_02_01_23_inverted_tagged.jpg" WidthFactor="2">
         <Credits>credits</Credits>
         <CreditsUrl>credits_url</CreditsUrl>
         <Description>description</Description>
@@ -62,7 +62,7 @@
   </Place>
   <Place Angle="0" AngularSize="0" DataSetType="Sky" Dec="37.68700994275855" Magnitude="0" Name="1/11/2023" Opacity="100" RA="15.787004849413922" Rotation="0" ZoomLevel="10">
     <ForegroundImageSet>
-      <ImageSet BandPass="Visible" BaseDegreesPerTile="0.0021657823342681013" BaseTileLevel="0" BottomsUp="False" CenterX="236.80507274120882" CenterY="37.68700994275855" DataSetType="Sky" ElevationModel="False" FileType=".jpg" Generic="False" Name="1/11/2023" OffsetX="400.5" OffsetY="276" Projection="SkyImage" QuadTreeMap="" Rotation="-90.00271612149828" Sparse="True" StockSet="False" TileLevels="0" Url="https://raw.githubusercontent.com/cosmicds/minids/main/green-comet/src/assets/693_2022E3_11_01_23_inverted_tagged.jpg" WidthFactor="2">
+      <ImageSet BandPass="Visible" BaseDegreesPerTile="0.0021657823342681013" BaseTileLevel="0" BottomsUp="False" CenterX="236.80507274120882" CenterY="37.68700994275855" DataSetType="Sky" ElevationModel="False" FileType=".jpg" Generic="False" Name="1/11/2023" OffsetX="400.5" OffsetY="276" Projection="SkyImage" QuadTreeMap="" Rotation="-90.00271612149828" Sparse="True" StockSet="False" TileLevels="0" Url="https://raw.githubusercontent.com/cosmicds/green-comet/main/src/assets/693_2022E3_11_01_23_inverted_tagged.jpg" WidthFactor="2">
         <Credits>credits</Credits>
         <CreditsUrl>credits_url</CreditsUrl>
         <Description>description</Description>
@@ -72,7 +72,7 @@
   </Place>
   <Place Angle="0" AngularSize="0" DataSetType="Sky" Dec="40.72867893611561" Magnitude="0" Name="1/14/2023" Opacity="100" RA="15.740159544593755" Rotation="0" ZoomLevel="10">
     <ForegroundImageSet>
-      <ImageSet BandPass="Visible" BaseDegreesPerTile="0.0018509245309162045" BaseTileLevel="0" BottomsUp="False" CenterX="236.10239316890633" CenterY="40.72867893611561" DataSetType="Sky" ElevationModel="False" FileType=".jpg" Generic="False" Name="1/14/2023" OffsetX="400.5" OffsetY="314" Projection="SkyImage" QuadTreeMap="" Rotation="89.72179970334962" Sparse="True" StockSet="False" TileLevels="0" Url="https://raw.githubusercontent.com/cosmicds/minids/main/green-comet/src/assets/694_2022E3_14_01_23_inverted_tagged.jpg" WidthFactor="2">
+      <ImageSet BandPass="Visible" BaseDegreesPerTile="0.0018509245309162045" BaseTileLevel="0" BottomsUp="False" CenterX="236.10239316890633" CenterY="40.72867893611561" DataSetType="Sky" ElevationModel="False" FileType=".jpg" Generic="False" Name="1/14/2023" OffsetX="400.5" OffsetY="314" Projection="SkyImage" QuadTreeMap="" Rotation="89.72179970334962" Sparse="True" StockSet="False" TileLevels="0" Url="https://raw.githubusercontent.com/cosmicds/green-comet/main/src/assets/694_2022E3_14_01_23_inverted_tagged.jpg" WidthFactor="2">
         <Credits>credits</Credits>
         <CreditsUrl>credits_url</CreditsUrl>
         <Description>description</Description>
@@ -82,7 +82,7 @@
   </Place>
   <Place Angle="0" AngularSize="0" DataSetType="Sky" Dec="49.598571220367006" Magnitude="0" Name="1/20/2023" Opacity="100" RA="15.494946142412063" Rotation="0" ZoomLevel="10">
     <ForegroundImageSet>
-      <ImageSet BandPass="Visible" BaseDegreesPerTile="0.0028657881351691495" BaseTileLevel="0" BottomsUp="False" CenterX="232.42419213618095" CenterY="49.598571220367006" DataSetType="Sky" ElevationModel="False" FileType=".jpg" Generic="False" Name="1/20/2023" OffsetX="400.5" OffsetY="240.5" Projection="SkyImage" QuadTreeMap="" Rotation="-179.86191457037205" Sparse="True" StockSet="False" TileLevels="0" Url="https://raw.githubusercontent.com/cosmicds/minids/main/green-comet/src/assets/696_2022E3_20_01_23_2_inverted_tagged.jpg" WidthFactor="2">
+      <ImageSet BandPass="Visible" BaseDegreesPerTile="0.0028657881351691495" BaseTileLevel="0" BottomsUp="False" CenterX="232.42419213618095" CenterY="49.598571220367006" DataSetType="Sky" ElevationModel="False" FileType=".jpg" Generic="False" Name="1/20/2023" OffsetX="400.5" OffsetY="240.5" Projection="SkyImage" QuadTreeMap="" Rotation="-179.86191457037205" Sparse="True" StockSet="False" TileLevels="0" Url="https://raw.githubusercontent.com/cosmicds/green-comet/main/src/assets/696_2022E3_20_01_23_2_inverted_tagged.jpg" WidthFactor="2">
         <Credits>credits</Credits>
         <CreditsUrl>credits_url</CreditsUrl>
         <Description>description</Description>
@@ -92,7 +92,7 @@
   </Place>
   <Place Angle="0" AngularSize="0" DataSetType="Sky" Dec="62.54128255525035" Magnitude="0" Name="1/24/2023" Opacity="100" RA="14.979153471394078" Rotation="0" ZoomLevel="10">
     <ForegroundImageSet>
-      <ImageSet BandPass="Visible" BaseDegreesPerTile="0.0016850083428044354" BaseTileLevel="0" BottomsUp="False" CenterX="224.68730207091116" CenterY="62.54128255525035" DataSetType="Sky" ElevationModel="False" FileType=".jpg" Generic="False" Name="1/24/2023" OffsetX="1000.5" OffsetY="660" Projection="SkyImage" QuadTreeMap="" Rotation="-1.880159957122086" Sparse="True" StockSet="False" TileLevels="0" Url="https://raw.githubusercontent.com/cosmicds/minids/main/green-comet/src/assets/703_2022E3_24_01_23_2_inverted_tagged.jpg" WidthFactor="2">
+      <ImageSet BandPass="Visible" BaseDegreesPerTile="0.0016850083428044354" BaseTileLevel="0" BottomsUp="False" CenterX="224.68730207091116" CenterY="62.54128255525035" DataSetType="Sky" ElevationModel="False" FileType=".jpg" Generic="False" Name="1/24/2023" OffsetX="1000.5" OffsetY="660" Projection="SkyImage" QuadTreeMap="" Rotation="-1.880159957122086" Sparse="True" StockSet="False" TileLevels="0" Url="https://raw.githubusercontent.com/cosmicds/green-comet/main/src/assets/703_2022E3_24_01_23_2_inverted_tagged.jpg" WidthFactor="2">
         <Credits>credits</Credits>
         <CreditsUrl>credits_url</CreditsUrl>
         <Description>description</Description>
@@ -102,7 +102,7 @@
   </Place>
   <Place Angle="0" AngularSize="0" DataSetType="Sky" Dec="79.4753231991739" Magnitude="0" Name="1/29/2023" Opacity="100" RA="11.545937068481974" Rotation="0" ZoomLevel="10">
     <ForegroundImageSet>
-      <ImageSet BandPass="Visible" BaseDegreesPerTile="0.0008365058835737894" BaseTileLevel="0" BottomsUp="False" CenterX="173.1890560272296" CenterY="79.4753231991739" DataSetType="Sky" ElevationModel="False" FileType=".jpg" Generic="False" Name="1/29/2023" OffsetX="950.5" OffsetY="639.5" Projection="SkyImage" QuadTreeMap="" Rotation="90.71376566973909" Sparse="True" StockSet="False" TileLevels="0" Url="https://raw.githubusercontent.com/cosmicds/minids/main/green-comet/src/assets/704_2022E3_29_01_23_inverted_tagged.jpg" WidthFactor="2">
+      <ImageSet BandPass="Visible" BaseDegreesPerTile="0.0008365058835737894" BaseTileLevel="0" BottomsUp="False" CenterX="173.1890560272296" CenterY="79.4753231991739" DataSetType="Sky" ElevationModel="False" FileType=".jpg" Generic="False" Name="1/29/2023" OffsetX="950.5" OffsetY="639.5" Projection="SkyImage" QuadTreeMap="" Rotation="90.71376566973909" Sparse="True" StockSet="False" TileLevels="0" Url="https://raw.githubusercontent.com/cosmicds/green-comet/main/src/assets/704_2022E3_29_01_23_inverted_tagged.jpg" WidthFactor="2">
         <Credits>credits</Credits>
         <CreditsUrl>credits_url</CreditsUrl>
         <Description>description</Description>
@@ -112,7 +112,7 @@
   </Place>
   <Place Angle="0" AngularSize="0" DataSetType="Sky" Dec="47.984128664369436" Magnitude="0" Name="2/5/2023" Opacity="100" RA="5.211254662155081" Rotation="0" ZoomLevel="10">
     <ForegroundImageSet>
-      <ImageSet BandPass="Visible" BaseDegreesPerTile="0.0006838428388718974" BaseTileLevel="0" BottomsUp="False" CenterX="78.16881993232622" CenterY="47.984128664369436" DataSetType="Sky" ElevationModel="False" FileType=".jpg" Generic="False" Name="2/5/2023" OffsetX="1200.5" OffsetY="836.5" Projection="SkyImage" QuadTreeMap="" Rotation="-89.23640914587278" Sparse="True" StockSet="False" TileLevels="0" Url="https://raw.githubusercontent.com/cosmicds/minids/main/green-comet/src/assets/709_2022E3_05_02_23_inverted_tagged.jpg" WidthFactor="2">
+      <ImageSet BandPass="Visible" BaseDegreesPerTile="0.0006838428388718974" BaseTileLevel="0" BottomsUp="False" CenterX="78.16881993232622" CenterY="47.984128664369436" DataSetType="Sky" ElevationModel="False" FileType=".jpg" Generic="False" Name="2/5/2023" OffsetX="1200.5" OffsetY="836.5" Projection="SkyImage" QuadTreeMap="" Rotation="-89.23640914587278" Sparse="True" StockSet="False" TileLevels="0" Url="https://raw.githubusercontent.com/cosmicds/green-comet/main/src/assets/709_2022E3_05_02_23_inverted_tagged.jpg" WidthFactor="2">
         <Credits>credits</Credits>
         <CreditsUrl>credits_url</CreditsUrl>
         <Description>description</Description>
@@ -122,7 +122,7 @@
   </Place>
   <Place Angle="0" AngularSize="0" DataSetType="Sky" Dec="42.42479591151067" Magnitude="0" Name="2/6/2023" Opacity="100" RA="5.061963928449675" Rotation="0" ZoomLevel="10">
     <ForegroundImageSet>
-      <ImageSet BandPass="Visible" BaseDegreesPerTile="0.0008020867999629951" BaseTileLevel="0" BottomsUp="False" CenterX="75.92945892674513" CenterY="42.42479591151067" DataSetType="Sky" ElevationModel="False" FileType=".jpg" Generic="False" Name="2/6/2023" OffsetX="700.5" OffsetY="1042.5" Projection="SkyImage" QuadTreeMap="" Rotation="-179.70032194448078" Sparse="True" StockSet="False" TileLevels="0" Url="https://raw.githubusercontent.com/cosmicds/minids/main/green-comet/src/assets/705_2022E3_06_02_23_inverted_tagged.jpg" WidthFactor="2">
+      <ImageSet BandPass="Visible" BaseDegreesPerTile="0.0008020867999629951" BaseTileLevel="0" BottomsUp="False" CenterX="75.92945892674513" CenterY="42.42479591151067" DataSetType="Sky" ElevationModel="False" FileType=".jpg" Generic="False" Name="2/6/2023" OffsetX="700.5" OffsetY="1042.5" Projection="SkyImage" QuadTreeMap="" Rotation="-179.70032194448078" Sparse="True" StockSet="False" TileLevels="0" Url="https://raw.githubusercontent.com/cosmicds/green-comet/main/src/assets/705_2022E3_06_02_23_inverted_tagged.jpg" WidthFactor="2">
         <Credits>credits</Credits>
         <CreditsUrl>credits_url</CreditsUrl>
         <Description>description</Description>
@@ -132,7 +132,7 @@
   </Place>
   <Place Angle="0" AngularSize="0" DataSetType="Sky" Dec="38.43065152492912" Magnitude="0" Name="2/7/2023" Opacity="100" RA="5.005515162865216" Rotation="0" ZoomLevel="10">
     <ForegroundImageSet>
-      <ImageSet BandPass="Visible" BaseDegreesPerTile="0.0007266917203023196" BaseTileLevel="0" BottomsUp="False" CenterX="75.08272744297824" CenterY="38.43065152492912" DataSetType="Sky" ElevationModel="False" FileType=".jpg" Generic="False" Name="2/7/2023" OffsetX="800.5" OffsetY="1157" Projection="SkyImage" QuadTreeMap="" Rotation="-179.35436567302716" Sparse="True" StockSet="False" TileLevels="0" Url="https://raw.githubusercontent.com/cosmicds/minids/main/green-comet/src/assets/707_2022E3_07_02_23_inverted_tagged.jpg" WidthFactor="2">
+      <ImageSet BandPass="Visible" BaseDegreesPerTile="0.0007266917203023196" BaseTileLevel="0" BottomsUp="False" CenterX="75.08272744297824" CenterY="38.43065152492912" DataSetType="Sky" ElevationModel="False" FileType=".jpg" Generic="False" Name="2/7/2023" OffsetX="800.5" OffsetY="1157" Projection="SkyImage" QuadTreeMap="" Rotation="-179.35436567302716" Sparse="True" StockSet="False" TileLevels="0" Url="https://raw.githubusercontent.com/cosmicds/green-comet/main/src/assets/707_2022E3_07_02_23_inverted_tagged.jpg" WidthFactor="2">
         <Credits>credits</Credits>
         <CreditsUrl>credits_url</CreditsUrl>
         <Description>description</Description>
@@ -142,7 +142,7 @@
   </Place>
   <Place Angle="0" AngularSize="0" DataSetType="Sky" Dec="34.231761197116846" Magnitude="0" Name="2/8/2023" Opacity="100" RA="4.939302117857148" Rotation="0" ZoomLevel="10">
     <ForegroundImageSet>
-      <ImageSet BandPass="Visible" BaseDegreesPerTile="0.0009675942501404869" BaseTileLevel="0" BottomsUp="False" CenterX="74.08953176785721" CenterY="34.231761197116846" DataSetType="Sky" ElevationModel="False" FileType=".jpg" Generic="False" Name="2/8/2023" OffsetX="600.5" OffsetY="839" Projection="SkyImage" QuadTreeMap="" Rotation="-179.1614972129584" Sparse="True" StockSet="False" TileLevels="0" Url="https://raw.githubusercontent.com/cosmicds/minids/main/green-comet/src/assets/710_2022E3_08_02_23_inverted_tagged.jpg" WidthFactor="2">
+      <ImageSet BandPass="Visible" BaseDegreesPerTile="0.0009675942501404869" BaseTileLevel="0" BottomsUp="False" CenterX="74.08953176785721" CenterY="34.231761197116846" DataSetType="Sky" ElevationModel="False" FileType=".jpg" Generic="False" Name="2/8/2023" OffsetX="600.5" OffsetY="839" Projection="SkyImage" QuadTreeMap="" Rotation="-179.1614972129584" Sparse="True" StockSet="False" TileLevels="0" Url="https://raw.githubusercontent.com/cosmicds/green-comet/main/src/assets/710_2022E3_08_02_23_inverted_tagged.jpg" WidthFactor="2">
         <Credits>credits</Credits>
         <CreditsUrl>credits_url</CreditsUrl>
         <Description>description</Description>
@@ -152,7 +152,7 @@
   </Place>
   <Place Angle="0" AngularSize="0" DataSetType="Sky" Dec="30.455142087510385" Magnitude="0" Name="2/9/2023" Opacity="100" RA="4.85173672801955" Rotation="0" ZoomLevel="10">
     <ForegroundImageSet>
-      <ImageSet BandPass="Visible" BaseDegreesPerTile="0.00119433851473123" BaseTileLevel="0" BottomsUp="False" CenterX="72.77605092029326" CenterY="30.455142087510385" DataSetType="Sky" ElevationModel="False" FileType=".jpg" Generic="False" Name="2/9/2023" OffsetX="700.5" OffsetY="880.5" Projection="SkyImage" QuadTreeMap="" Rotation="90.44871317531737" Sparse="True" StockSet="False" TileLevels="0" Url="https://raw.githubusercontent.com/cosmicds/minids/main/green-comet/src/assets/711_2022E3_09_02_23_2_inverted_tagged.jpg" WidthFactor="2">
+      <ImageSet BandPass="Visible" BaseDegreesPerTile="0.00119433851473123" BaseTileLevel="0" BottomsUp="False" CenterX="72.77605092029326" CenterY="30.455142087510385" DataSetType="Sky" ElevationModel="False" FileType=".jpg" Generic="False" Name="2/9/2023" OffsetX="700.5" OffsetY="880.5" Projection="SkyImage" QuadTreeMap="" Rotation="90.44871317531737" Sparse="True" StockSet="False" TileLevels="0" Url="https://raw.githubusercontent.com/cosmicds/green-comet/main/src/assets/711_2022E3_09_02_23_2_inverted_tagged.jpg" WidthFactor="2">
         <Credits>credits</Credits> 
         <CreditsUrl>credits_url</CreditsUrl>
         <Description>description</Description>
